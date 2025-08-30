@@ -453,15 +453,14 @@
       const jumlahOrangBPJSInput = document.getElementById("jumlahOrangBPJS");
       const totalBayarBPJS = document.getElementById("totalBayarBPJS");
 
-      // Menambahkan event listener untuk validasi input
-      jumlahOrangBPJSInput.addEventListener("input", function(e) {
+      jumlahOrangBPJSInput.addEventListener("input", function (e) {
         let value = e.target.value;
-        if (value.includes('.') || value.includes(',')) {
-            alert("Input jumlah orang harus berupa angka bulat.");
-            e.target.value = Math.floor(value);
+        if (value.includes(".") || value.includes(",")) {
+          alert("Input jumlah orang harus berupa angka bulat.");
+          e.target.value = Math.floor(value);
         }
       });
-      
+
       const biayaPerKelas = {
         pbi: 42000,
         kelas1: 150000,
@@ -506,17 +505,17 @@
       const jumlahKWHInput = document.getElementById("jumlahKWH");
       const hasilListrikDiv = document.getElementById("hasilListrik");
 
-      // Validasi input kWh agar hanya menerima angka dan koma
-      jumlahKWHInput.addEventListener('input', function(e) {
+      jumlahKWHInput.addEventListener("input", function (e) {
         const input = e.target;
-        // Ganti titik dengan koma secara otomatis
-        let value = input.value.replace(/\./g, ',');
-        // Hapus karakter selain angka dan koma
-        value = value.replace(/[^0-9,]/g, '');
-        // Pastikan hanya ada satu koma
-        const parts = value.split(',');
+        let value = input.value.replace(/\./g, ",");
+        const originalValue = input.value;
+        const newValue = value.replace(/[^0-9,]/g, "");
+        if (newValue !== originalValue) {
+          alert("Input hanya boleh berupa angka dan koma.");
+        }
+        const parts = newValue.split(",");
         if (parts.length > 2) {
-          value = parts[0] + ',' + parts.slice(1).join('');
+          value = parts[0] + "," + parts.slice(1).join("");
         }
         input.value = value;
       });
@@ -586,7 +585,6 @@
       hitungListrikBtn.addEventListener("click", hitungListrik);
       resetListrikBtn.addEventListener("click", refreshListrik);
       jumlahRupiahInput.addEventListener("keyup", () => formatRupiah(jumlahRupiahInput));
-      
 
       for (const radio of modeRadiosListrik) {
         radio.addEventListener("change", (e) => {
@@ -625,24 +623,30 @@
       const hasilAirDiv = document.getElementById("hasilAir");
       const kelompokRadiosAir = document.getElementsByName("kelompok");
 
-      // Fungsi format input Rupiah
-      function formatRupiahAir(input) {
-        let nilai = input.value.replace(/\./g, "");
-        let formatted = new Intl.NumberFormat("id-ID").format(nilai);
-        input.value = formatted;
-      }
-      
-      // Validasi input meter kubik (m3) agar hanya menerima angka dan koma
-      m3AirInput.addEventListener('input', function(e) {
+      rupiahAirInput.addEventListener("keyup", function (e) {
+        let input = e.target.value.replace(/\./g, "");
+        input = input.replace(/,/g, ".");
+        let number = parseFloat(input);
+
+        if (isNaN(number)) {
+          e.target.value = "";
+          return;
+        }
+
+        e.target.value = number.toLocaleString("id-ID", { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+      });
+
+      m3AirInput.addEventListener("input", function (e) {
         const input = e.target;
-        // Ganti titik dengan koma secara otomatis
-        let value = input.value.replace(/\./g, ',');
-        // Hapus karakter selain angka dan koma
-        value = value.replace(/[^0-9,]/g, '');
-        // Pastikan hanya ada satu koma
-        const parts = value.split(',');
+        let value = input.value.replace(/\./g, ",");
+        const originalValue = input.value;
+        const newValue = value.replace(/[^0-9,]/g, "");
+        if (newValue !== originalValue) {
+          alert("Input hanya boleh berupa angka dan koma.");
+        }
+        const parts = newValue.split(",");
         if (parts.length > 2) {
-          value = parts[0] + ',' + parts.slice(1).join('');
+          value = parts[0] + "," + parts.slice(1).join("");
         }
         input.value = value;
       });
@@ -677,7 +681,7 @@
         if (sisaRupiah > 0) {
           penggunaanAir += sisaRupiah / tarifKelompok[2];
         }
-        
+
         return penggunaanAir.toLocaleString("id-ID", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
       }
 
@@ -715,8 +719,8 @@
         const tarifKelompok = tarifAir[kelompok];
 
         if (mode === "rupiah-to-m3") {
-          const inputValue = rupiahAirInput.value.replace(/\./g, "");
-          const totalRupiah = parseInt(inputValue);
+          const inputValue = rupiahAirInput.value.replace(/\./g, "").replace(/,/g, ".");
+          const totalRupiah = parseFloat(inputValue);
 
           if (isNaN(totalRupiah) || totalRupiah <= 0) {
             hasilAirDiv.innerHTML = "⚠️ Masukkan jumlah tagihan yang valid (hanya angka positif).";
@@ -728,7 +732,7 @@
                                  Berdasarkan tarif **${namaKelompok}**, perkiraan penggunaan air Anda adalah sekitar **${penggunaanAir} meter kubik**.<br>`;
         } else {
           const totalM3 = parseFloat(m3AirInput.value.replace(/,/g, "."));
-          
+
           if (isNaN(totalM3) || totalM3 <= 0) {
             hasilAirDiv.innerHTML = "⚠️ Masukkan jumlah penggunaan air yang valid (angka positif).";
             return;
@@ -766,7 +770,6 @@
       for (const radio of modeRadiosAir) {
         radio.addEventListener("change", toggleAirInputs);
       }
-      rupiahAirInput.addEventListener("keyup", () => formatRupiahAir(rupiahAirInput));
 
       hitungAirBtn.addEventListener("click", hitungAir);
       resetAirBtn.addEventListener("click", resetAirForm);
