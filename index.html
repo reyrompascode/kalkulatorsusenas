@@ -338,6 +338,17 @@
       const resetAgeBtn = document.getElementById("resetAgeBtn");
       const resultAgeDiv = document.getElementById("resultAge");
 
+      birthdateInput.addEventListener("keypress", (e) => {
+        // Cek apakah tombol yang ditekan adalah "Enter"
+        if (e.key === "Enter" || e.keyCode === 13) {
+          // Mencegah perilaku default Enter (misalnya, submit form)
+          e.preventDefault();
+          // Memanggil fungsi hitung usia
+          calculateAge();
+        }
+      });
+      
+
       function calculateAge() {
         const birthdateValue = birthdateInput.value;
         if (!birthdateValue) {
@@ -618,5 +629,6 @@
     </script>
   </body>
 </html>
+
 
 
