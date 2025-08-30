@@ -325,6 +325,10 @@
       </div>
     </div>
 
+    <div class="button-group" style="margin-top: 40px">
+      <button id="resetAllBtn" class="reset-btn">Reset Semua Kalkulator</button>
+    </div>
+
     <footer class="footer">BPS Kota Jakarta Barat Jaya Jaya Jaya</footer>
 
     <script>
@@ -598,7 +602,19 @@
           hasilListrikDiv.innerHTML = "";
         });
       }
+
+      // --- Fungsionalitas Reset Semua ---
+      const resetAllBtn = document.getElementById("resetAllBtn");
+
+      function resetAllCalculators() {
+        // Panggil semua fungsi reset
+        resetAgeForm();
+        resetBPJSBtn.click(); // Menggunakan .click() untuk memicu event listener
+        resetDynamicInputs();
+        refreshListrik();
+      }
+
+      resetAllBtn.addEventListener("click", resetAllCalculators);
     </script>
   </body>
 </html>
-
