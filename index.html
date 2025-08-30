@@ -164,6 +164,37 @@
       #hasilListrik {
         min-height: 25px;
       }
+
+      /* Styles for Water Calculator */
+      .mode-group {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+      .mode-group label {
+        display: flex;
+        align-items: center;
+      }
+      .radio-item {
+        display: flex;
+        align-items: center;
+        background-color: #f9f9f9;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        cursor: pointer;
+        transition: background-color 0.2s, border-color 0.2s;
+        width: 100%;
+      }
+      .radio-item:hover {
+        background-color: #f0f0f0;
+        border-color: #bbb;
+      }
+      .radio-item input[type="radio"] {
+        margin-right: 10px;
+        transform: scale(1.2);
+      }
     </style>
   </head>
   <body>
@@ -194,7 +225,7 @@
           <label>Pilihan Kelas:</label>
           <div class="radio-group">
             <div>
-              <input type="radio" id="pbi" name="kelas" value="pbi" checked />
+              <input type="radio" id="pbi" name="kelas" value="pbi" />
               <label for="pbi">PBI (Rp42.000)</label>
             </div>
             <div>
@@ -218,22 +249,6 @@
         <div class="result">
           <p>Total iuran bulanan BPJS yang harus dibayarkan:</p>
           <h3 id="totalBayarBPJS">Rp0</h3>
-        </div>
-      </div>
-
-      <div class="calculator-section">
-        <h2>Kalkulator Penjumlahan Dinamis</h2>
-        <div id="dynamic-inputs-container">
-          <div class="input-row">
-            <span class="line-number">1.</span>
-            <input type="text" class="value-input" placeholder="Masukkan nilai..." />
-          </div>
-        </div>
-        <div class="button-group">
-          <button id="resetDynamicBtn" class="reset-btn">Reset</button>
-        </div>
-        <div class="result">
-          <p>Total Nilai: <span id="total-sum-dynamic">0</span></p>
         </div>
       </div>
 
@@ -323,6 +338,60 @@
         </div>
         <div class="result" id="hasilListrik"></div>
       </div>
+
+      <div class="calculator-section">
+        <h2>Kalkulator Tagihan Air</h2>
+        <div class="form-group">
+          <div class="mode-group">
+            <label><input type="radio" name="modeAir" value="rupiah-to-m3" checked /> Rupiah ke m³</label>
+            <label><input type="radio" name="modeAir" value="m3-to-rupiah" /> m³ ke Rupiah</label>
+          </div>
+        </div>
+        <div id="rupiahInputGroup" class="form-group">
+          <label for="rupiahInput">Jumlah Tagihan (Rupiah):</label>
+          <input type="text" id="rupiahInput" placeholder="Contoh: 50.000" required />
+        </div>
+        <div id="m3InputGroup" class="form-group" style="display: none">
+          <label for="m3Input">Penggunaan Air (m³):</label>
+          <input type="number" id="m3Input" placeholder="Contoh: 15" required />
+        </div>
+        <div class="form-group">
+          <label>Pilih Kelompok Pelanggan:</label>
+          <div class="radio-group">
+            <label class="radio-item"><input type="radio" name="kelompok" value="KI" /> 1. KI (Bangunan Sosial, Hidran Kebakaran, dll)</label>
+            <label class="radio-item"><input type="radio" name="kelompok" value="rsh" /> 2. Rumah Susun Sangat Sederhana</label>
+            <label class="radio-item"><input type="radio" name="kelompok" value="rts1" /> 3. Rumah Tangga Sangat Sederhana II</label>
+            <label class="radio-item"><input type="radio" name="kelompok" value="rssp" /> 4. Rumah Susun Sederhana Sewa-Pemerintah</label>
+            <label class="radio-item"><input type="radio" name="kelompok" value="rts2" /> 5. Rumah Tangga Sederhana I</label>
+            <label class="radio-item"><input type="radio" name="kelompok" value="rts3" /> 6. Rumah Tangga Sederhana II</label>
+            <label class="radio-item"><input type="radio" name="kelompok" value="rtm1" /> 7. Rumah Tangga Menengah I</label>
+            <label class="radio-item"><input type="radio" name="kelompok" value="rtm2" /> 8. Rumah Tangga Menengah II</label>
+            <label class="radio-item"><input type="radio" name="kelompok" value="rtam1" /> 9. Rumah Tangga Di Atas Menengah I</label>
+            <label class="radio-item"><input type="radio" name="kelompok" value="rtam2" /> 10. Rumah Tangga Di Atas Menengah II</label>
+          </div>
+        </div>
+        <div class="button-group">
+          <button id="hitungAirBtn">Hitung</button>
+          <button id="resetAirBtn" class="reset-btn">Reset</button>
+        </div>
+        <div id="hasilAir" class="result"></div>
+      </div>
+
+      <div class="calculator-section">
+        <h2>Kalkulator Penjumlahan Dinamis</h2>
+        <div id="dynamic-inputs-container">
+          <div class="input-row">
+            <span class="line-number">1.</span>
+            <input type="text" class="value-input" placeholder="Masukkan nilai..." />
+          </div>
+        </div>
+        <div class="button-group">
+          <button id="resetDynamicBtn" class="reset-btn">Reset</button>
+        </div>
+        <div class="result">
+          <p>Total Nilai: <span id="total-sum-dynamic">0</span></p>
+        </div>
+      </div>
     </div>
 
     <div class="button-group" style="margin-top: 40px">
@@ -339,15 +408,11 @@
       const resultAgeDiv = document.getElementById("resultAge");
 
       birthdateInput.addEventListener("keypress", (e) => {
-        // Cek apakah tombol yang ditekan adalah "Enter"
         if (e.key === "Enter" || e.keyCode === 13) {
-          // Mencegah perilaku default Enter (misalnya, submit form)
           e.preventDefault();
-          // Memanggil fungsi hitung usia
           calculateAge();
         }
       });
-      
 
       function calculateAge() {
         const birthdateValue = birthdateInput.value;
@@ -401,120 +466,30 @@
 
       hitungBPJSBtn.addEventListener("click", () => {
         const jumlahOrang = parseInt(jumlahOrangBPJSInput.value);
-        const kelasDipilih = document.querySelector('input[name="kelas"]:checked').value;
+        const kelasDipilih = document.querySelector('input[name="kelas"]:checked');
 
         if (isNaN(jumlahOrang) || jumlahOrang <= 0) {
           alert("Masukkan jumlah orang yang valid (hanya angka dan lebih dari 0).");
           totalBayarBPJS.textContent = "Rp0";
           return;
         }
-        if (biayaPerKelas[kelasDipilih]) {
-          const totalBiaya = jumlahOrang * biayaPerKelas[kelasDipilih];
-          totalBayarBPJS.textContent = `Rp${totalBiaya.toLocaleString("id-ID")}`;
+
+        if (!kelasDipilih) {
+          alert("Mohon pilih salah satu kelas BPJS.");
+          totalBayarBPJS.textContent = "Rp0";
+          return;
         }
+
+        const totalBiaya = jumlahOrang * biayaPerKelas[kelasDipilih.value];
+        totalBayarBPJS.textContent = `Rp${totalBiaya.toLocaleString("id-ID")}`;
       });
 
       resetBPJSBtn.addEventListener("click", () => {
         jumlahOrangBPJSInput.value = 1;
-        document.getElementById("pbi").checked = true;
+        const radios = document.getElementsByName("kelas");
+        radios.forEach((radio) => (radio.checked = false));
         totalBayarBPJS.textContent = "Rp0";
       });
-
-      // --- Kalkulator Dinamis ---
-      const inputsContainer = document.getElementById("dynamic-inputs-container");
-      const totalSumSpan = document.getElementById("total-sum-dynamic");
-      const resetButtonDynamic = document.getElementById("resetDynamicBtn");
-
-      const cleanNumber = (value) => value.replace(/\./g, "").replace(/,/g, ".");
-      const formatNumber = (value) => {
-        const cleanedValue = cleanNumber(value);
-        if (!cleanedValue) return "";
-        const parts = cleanedValue.split(".");
-        const integerPart = parseInt(parts[0]).toLocaleString("id-ID");
-        const decimalPart = parts[1];
-        if (decimalPart !== undefined) return integerPart + "," + decimalPart;
-        else return integerPart;
-      };
-
-      const updateSum = () => {
-        let total = 0;
-        let maxDecimalPlaces = 0;
-        const inputs = inputsContainer.querySelectorAll(".value-input");
-        inputs.forEach((input) => {
-          const value = cleanNumber(input.value);
-          const parsedValue = parseFloat(value) || 0;
-          total += parsedValue;
-          const decimalPart = value.split(".")[1] || "";
-          if (decimalPart.length > maxDecimalPlaces) maxDecimalPlaces = decimalPart.length;
-        });
-        if (maxDecimalPlaces > 0) totalSumSpan.textContent = total.toLocaleString("id-ID", { minimumFractionDigits: maxDecimalPlaces, maximumFractionDigits: maxDecimalPlaces });
-        else totalSumSpan.textContent = total.toLocaleString("id-ID", { minimumFractionDigits: 0, maximumFractionDigits: 0 });
-      };
-
-      const addInputListeners = (input) => {
-        input.addEventListener("keyup", handleInput);
-        input.addEventListener("keypress", (e) => {
-          if (e.key === "Enter" || e.keyCode === 13) {
-            e.preventDefault();
-            addNewInput();
-          }
-        });
-      };
-
-      const handleInput = (event) => {
-        const input = event.target;
-        let value = input.value;
-        const sanitizedValue = value.replace(/[^0-9,.]/g, "");
-        if (value !== sanitizedValue) {
-          alert("Input hanya boleh berupa angka, koma, atau titik.");
-          input.value = sanitizedValue;
-          return;
-        }
-        const cursorPosition = input.selectionStart;
-        const separatorsBefore = (value.substring(0, cursorPosition).match(/\./g) || []).length;
-        input.value = formatNumber(value);
-        const newSeparatorsBefore = (input.value.substring(0, input.selectionStart).match(/\./g) || []).length;
-        input.selectionStart = cursorPosition + (newSeparatorsBefore - separatorsBefore);
-        input.selectionEnd = cursorPosition + (newSeparatorsBefore - separatorsBefore);
-        updateSum();
-      };
-
-      const addNewInput = () => {
-        const rowCount = inputsContainer.children.length;
-        const newRow = document.createElement("div");
-        newRow.className = "input-row";
-        const newNumber = document.createElement("span");
-        newNumber.className = "line-number";
-        newNumber.textContent = `${rowCount + 1}.`;
-        const newInput = document.createElement("input");
-        newInput.type = "text";
-        newInput.className = "value-input";
-        newInput.placeholder = "Masukkan nilai...";
-        newRow.appendChild(newNumber);
-        newRow.appendChild(newInput);
-        inputsContainer.appendChild(newRow);
-        newInput.focus();
-        addInputListeners(newInput);
-      };
-
-      const resetDynamicInputs = () => {
-        inputsContainer.innerHTML = `
-          <div class="input-row">
-            <span class="line-number">1.</span>
-            <input type="text" class="value-input" placeholder="Masukkan nilai...">
-          </div>`;
-        const initialInput = document.querySelector(".value-input");
-        initialInput.value = "";
-        initialInput.focus();
-        totalSumSpan.textContent = "0";
-        addInputListeners(initialInput);
-        updateSum();
-      };
-
-      const initialInput = document.querySelector(".value-input");
-      addInputListeners(initialInput);
-      resetButtonDynamic.addEventListener("click", resetDynamicInputs);
-      updateSum();
 
       // --- Kalkulator Listrik ---
       const modeRadiosListrik = document.getElementsByName("modeListrik");
@@ -614,21 +589,269 @@
         });
       }
 
+      // --- Kalkulator Air ---
+      const tarifAir = {
+        KI: [1000, 1500, 1700],
+        rsh: [1000, 2000, 3000],
+        rts1: [1500, 3000, 5550],
+        rssp: [1050, 7450, 7450],
+        rts2: [3550, 6750, 7500],
+        rts3: [4000, 7500, 9500],
+        rtm1: [4900, 9500, 12500],
+        rtm2: [6000, 10500, 14000],
+        rtam1: [6825, 12500, 17500],
+        rtam2: [8600, 15000, 20000],
+      };
+
+      const hitungAirBtn = document.getElementById("hitungAirBtn");
+      const resetAirBtn = document.getElementById("resetAirBtn");
+      const modeRadiosAir = document.getElementsByName("modeAir");
+      const rupiahAirInput = document.getElementById("rupiahInput");
+      const m3AirInput = document.getElementById("m3Input");
+      const rupiahAirGroup = document.getElementById("rupiahInputGroup");
+      const m3AirGroup = document.getElementById("m3InputGroup");
+      const hasilAirDiv = document.getElementById("hasilAir");
+      const kelompokRadiosAir = document.getElementsByName("kelompok");
+
+      function formatRupiahAir(input) {
+        let nilai = input.value.replace(/\./g, "");
+        let formatted = new Intl.NumberFormat("id-ID").format(nilai);
+        input.value = formatted;
+      }
+
+      function hitungRupiahKeM3(totalRupiah, tarifKelompok) {
+        let penggunaanAir = 0;
+        let sisaRupiah = totalRupiah;
+
+        const tier1_biaya = 10 * tarifKelompok[0];
+        const tier2_biaya = 10 * tarifKelompok[1];
+
+        if (sisaRupiah > 0) {
+          if (sisaRupiah >= tier1_biaya) {
+            penggunaanAir += 10;
+            sisaRupiah -= tier1_biaya;
+          } else {
+            penggunaanAir += sisaRupiah / tarifKelompok[0];
+            sisaRupiah = 0;
+          }
+        }
+
+        if (sisaRupiah > 0) {
+          if (sisaRupiah >= tier2_biaya) {
+            penggunaanAir += 10;
+            sisaRupiah -= tier2_biaya;
+          } else {
+            penggunaanAir += sisaRupiah / tarifKelompok[1];
+            sisaRupiah = 0;
+          }
+        }
+
+        if (sisaRupiah > 0) {
+          penggunaanAir += sisaRupiah / tarifKelompok[2];
+        }
+
+        return penggunaanAir.toFixed(2);
+      }
+
+      function hitungM3KeRupiah(totalM3, tarifKelompok) {
+        let totalRupiah = 0;
+        let sisaM3 = totalM3;
+
+        if (sisaM3 > 0) {
+          if (sisaM3 > 20) {
+            totalRupiah += (sisaM3 - 20) * tarifKelompok[2];
+            sisaM3 = 20;
+          }
+          if (sisaM3 > 10) {
+            totalRupiah += (sisaM3 - 10) * tarifKelompok[1];
+            sisaM3 = 10;
+          }
+          if (sisaM3 > 0) {
+            totalRupiah += sisaM3 * tarifKelompok[0];
+          }
+        }
+        return totalRupiah;
+      }
+
+      function hitungAir() {
+        const mode = document.querySelector('input[name="modeAir"]:checked').value;
+        const selectedRadio = document.querySelector('input[name="kelompok"]:checked');
+
+        if (!selectedRadio) {
+          hasilAirDiv.innerHTML = "⚠️ Pilih salah satu kelompok pelanggan.";
+          return;
+        }
+
+        const kelompok = selectedRadio.value;
+        const namaKelompok = selectedRadio.parentElement.textContent.trim();
+        const tarifKelompok = tarifAir[kelompok];
+
+        if (mode === "rupiah-to-m3") {
+          const inputValue = rupiahAirInput.value.replace(/\./g, "");
+          const totalRupiah = parseInt(inputValue);
+
+          if (isNaN(totalRupiah) || totalRupiah <= 0) {
+            hasilAirDiv.innerHTML = "⚠️ Masukkan jumlah tagihan yang valid (hanya angka positif).";
+            return;
+          }
+
+          const penggunaanAir = hitungRupiahKeM3(totalRupiah, tarifKelompok);
+          hasilAirDiv.innerHTML = `Jumlah tagihan Anda adalah **Rp ${totalRupiah.toLocaleString("id-ID")}**.<br>
+                                  Berdasarkan tarif **${namaKelompok}**, perkiraan penggunaan air Anda adalah sekitar **${penggunaanAir} meter kubik**.<br>`;
+        } else {
+          const totalM3 = parseFloat(m3AirInput.value);
+
+          if (isNaN(totalM3) || totalM3 <= 0) {
+            hasilAirDiv.innerHTML = "⚠️ Masukkan jumlah penggunaan air yang valid (angka positif).";
+            return;
+          }
+
+          const totalRupiah = hitungM3KeRupiah(totalM3, tarifKelompok);
+          hasilAirDiv.innerHTML = `Penggunaan air Anda adalah **${totalM3} meter kubik**.<br>
+                                  Berdasarkan tarif **${namaKelompok}**, perkiraan jumlah tagihan Anda adalah sekitar **Rp ${totalRupiah.toLocaleString("id-ID")}**.<br>`;
+        }
+      }
+
+      function resetAirForm() {
+        rupiahAirInput.value = "";
+        m3AirInput.value = "";
+        for (const radio of kelompokRadiosAir) {
+          radio.checked = false;
+        }
+        document.querySelector('input[name="modeAir"][value="rupiah-to-m3"]').checked = true;
+        toggleAirInputs();
+        hasilAirDiv.innerHTML = "";
+      }
+
+      function toggleAirInputs() {
+        const mode = document.querySelector('input[name="modeAir"]:checked').value;
+        if (mode === "rupiah-to-m3") {
+          rupiahAirGroup.style.display = "block";
+          m3AirGroup.style.display = "none";
+        } else {
+          rupiahAirGroup.style.display = "none";
+          m3AirGroup.style.display = "block";
+        }
+        hasilAirDiv.innerHTML = "";
+      }
+
+      for (const radio of modeRadiosAir) {
+        radio.addEventListener("change", toggleAirInputs);
+      }
+      rupiahAirInput.addEventListener("keyup", () => formatRupiahAir(rupiahAirInput));
+
+      hitungAirBtn.addEventListener("click", hitungAir);
+      resetAirBtn.addEventListener("click", resetAirForm);
+
+      // --- Kalkulator Dinamis ---
+      const inputsContainer = document.getElementById("dynamic-inputs-container");
+      const totalSumSpan = document.getElementById("total-sum-dynamic");
+      const resetButtonDynamic = document.getElementById("resetDynamicBtn");
+
+      const cleanNumber = (value) => value.replace(/\./g, "").replace(/,/g, ".");
+      const formatNumber = (value) => {
+        const cleanedValue = cleanNumber(value);
+        if (!cleanedValue) return "";
+        const parts = cleanedValue.split(".");
+        const integerPart = parseInt(parts[0]).toLocaleString("id-ID");
+        const decimalPart = parts[1];
+        if (decimalPart !== undefined) return integerPart + "," + decimalPart;
+        else return integerPart;
+      };
+
+      const updateSum = () => {
+        let total = 0;
+        let maxDecimalPlaces = 0;
+        const inputs = inputsContainer.querySelectorAll(".value-input");
+        inputs.forEach((input) => {
+          const value = cleanNumber(input.value);
+          const parsedValue = parseFloat(value) || 0;
+          total += parsedValue;
+          const decimalPart = value.split(".")[1] || "";
+          if (decimalPart.length > maxDecimalPlaces) maxDecimalPlaces = decimalPart.length;
+        });
+        if (maxDecimalPlaces > 0) totalSumSpan.textContent = total.toLocaleString("id-ID", { minimumFractionDigits: maxDecimalPlaces, maximumFractionDigits: maxDecimalPlaces });
+        else totalSumSpan.textContent = total.toLocaleString("id-ID", { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+      };
+
+      const addInputListeners = (input) => {
+        input.addEventListener("keyup", handleInput);
+        input.addEventListener("keypress", (e) => {
+          if (e.key === "Enter" || e.keyCode === 13) {
+            e.preventDefault();
+            addNewInput();
+          }
+        });
+      };
+
+      const handleInput = (event) => {
+        const input = event.target;
+        let value = input.value;
+        const sanitizedValue = value.replace(/[^0-9,.]/g, "");
+        if (value !== sanitizedValue) {
+          alert("Input hanya boleh berupa angka, koma, atau titik.");
+          input.value = sanitizedValue;
+          return;
+        }
+        const cursorPosition = input.selectionStart;
+        const separatorsBefore = (value.substring(0, cursorPosition).match(/\./g) || []).length;
+        input.value = formatNumber(value);
+        const newSeparatorsBefore = (input.value.substring(0, input.selectionStart).match(/\./g) || []).length;
+        input.selectionStart = cursorPosition + (newSeparatorsBefore - separatorsBefore);
+        input.selectionEnd = cursorPosition + (newSeparatorsBefore - separatorsBefore);
+        updateSum();
+      };
+
+      const addNewInput = () => {
+        const rowCount = inputsContainer.children.length;
+        const newRow = document.createElement("div");
+        newRow.className = "input-row";
+        const newNumber = document.createElement("span");
+        newNumber.className = "line-number";
+        newNumber.textContent = `${rowCount + 1}.`;
+        const newInput = document.createElement("input");
+        newInput.type = "text";
+        newInput.className = "value-input";
+        newInput.placeholder = "Masukkan nilai...";
+        newRow.appendChild(newNumber);
+        newRow.appendChild(newInput);
+        inputsContainer.appendChild(newRow);
+        newInput.focus();
+        addInputListeners(newInput);
+      };
+
+      const resetDynamicInputs = () => {
+        inputsContainer.innerHTML = `
+          <div class="input-row">
+            <span class="line-number">1.</span>
+            <input type="text" class="value-input" placeholder="Masukkan nilai...">
+          </div>`;
+        const initialInput = document.querySelector(".value-input");
+        initialInput.value = "";
+        initialInput.focus();
+        totalSumSpan.textContent = "0";
+        addInputListeners(initialInput);
+        updateSum();
+      };
+
+      const initialInput = document.querySelector(".value-input");
+      addInputListeners(initialInput);
+      resetButtonDynamic.addEventListener("click", resetDynamicInputs);
+      updateSum();
+
       // --- Fungsionalitas Reset Semua ---
       const resetAllBtn = document.getElementById("resetAllBtn");
 
       function resetAllCalculators() {
         // Panggil semua fungsi reset
         resetAgeForm();
-        resetBPJSBtn.click(); // Menggunakan .click() untuk memicu event listener
+        resetBPJSBtn.click();
         resetDynamicInputs();
         refreshListrik();
+        resetAirForm();
       }
 
       resetAllBtn.addEventListener("click", resetAllCalculators);
     </script>
   </body>
 </html>
-
-
-
