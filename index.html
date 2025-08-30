@@ -356,7 +356,7 @@
           <input type="number" id="m3Input" placeholder="Contoh: 15" required />
         </div>
         <div class="form-group">
-          <label>Pilih Kategori Pelanggan:</label>
+          <label>Pilih Kelompok Pelanggan:</label>
           <div class="radio-group">
             <label class="radio-item"><input type="radio" name="kelompok" value="KI" /> 1. KI (Bangunan Sosial, Hidran Kebakaran, dll)</label>
             <label class="radio-item"><input type="radio" name="kelompok" value="rsh" /> 2. Rumah Susun Sangat Sederhana</label>
@@ -516,9 +516,7 @@
       }
 
       function formatAngka(angka) {
-        const parts = angka.toString().split(".");
-        const rupiah = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-        return rupiah + (parts[1] ? "," + parts[1] : "");
+        return angka.toLocaleString("id-ID", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
       }
 
       function hitungListrik() {
@@ -544,7 +542,7 @@
             return;
           }
           const kwh = jumlahRupiah / hargaPerKWH;
-          hasilListrikDiv.innerHTML = `Konsumsi kWh adalah: <br> ${kwh.toFixed(2)} kWh`;
+          hasilListrikDiv.innerHTML = `Konsumsi kWh adalah: <br> ${kwh.toLocaleString("id-ID", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} kWh`;
         } else {
           const jumlahKWH = parseFloat(jumlahKWHInput.value.replace(/,/g, "."));
           if (isNaN(jumlahKWH) || jumlahKWH <= 0) {
@@ -552,7 +550,7 @@
             return;
           }
           const totalRupiah = jumlahKWH * hargaPerKWH;
-          hasilListrikDiv.innerHTML = `Jumlah Rupiah yang harus dibayarkan adalah: <br> Rp ${formatAngka(totalRupiah.toFixed(2))}`;
+          hasilListrikDiv.innerHTML = `Jumlah Rupiah yang harus dibayarkan adalah: <br> Rp ${totalRupiah.toLocaleString("id-ID", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
         }
       }
 
@@ -650,7 +648,7 @@
           penggunaanAir += sisaRupiah / tarifKelompok[2];
         }
 
-        return penggunaanAir.toFixed(2);
+        return penggunaanAir.toLocaleString("id-ID", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
       }
 
       function hitungM3KeRupiah(totalM3, tarifKelompok) {
@@ -697,7 +695,7 @@
 
           const penggunaanAir = hitungRupiahKeM3(totalRupiah, tarifKelompok);
           hasilAirDiv.innerHTML = `Jumlah tagihan Anda adalah **Rp ${totalRupiah.toLocaleString("id-ID")}**.<br>
-                                  Berdasarkan tarif **${namaKelompok}**, perkiraan penggunaan air Anda adalah sekitar **${penggunaanAir} meter kubik**.<br>`;
+                                 Berdasarkan tarif **${namaKelompok}**, perkiraan penggunaan air Anda adalah sekitar **${penggunaanAir} meter kubik**.<br>`;
         } else {
           const totalM3 = parseFloat(m3AirInput.value);
 
@@ -707,8 +705,8 @@
           }
 
           const totalRupiah = hitungM3KeRupiah(totalM3, tarifKelompok);
-          hasilAirDiv.innerHTML = `Penggunaan air Anda adalah **${totalM3} meter kubik**.<br>
-                                  Berdasarkan tarif **${namaKelompok}**, perkiraan jumlah tagihan Anda adalah sekitar **Rp ${totalRupiah.toLocaleString("id-ID")}**.<br>`;
+          hasilAirDiv.innerHTML = `Penggunaan air Anda adalah **${totalM3.toLocaleString("id-ID")} meter kubik**.<br>
+                                 Berdasarkan tarif **${namaKelompok}**, perkiraan jumlah tagihan Anda adalah sekitar **Rp ${totalRupiah.toLocaleString("id-ID")}**.<br>`;
         }
       }
 
@@ -850,9 +848,7 @@
         refreshListrik();
         resetAirForm();
       }
-
       resetAllBtn.addEventListener("click", resetAllCalculators);
     </script>
   </body>
 </html>
-
