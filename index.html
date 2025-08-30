@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KALKULATOR SUSENAS</title>
+    <title>Kumpulan Kalkulator</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
@@ -23,24 +23,26 @@
         text-align: center;
         margin-bottom: 30px;
       }
-
-      /* Flexbox Container untuk semua kalkulator */
+      .logo {
+        max-width: 250px;
+        height: auto;
+        margin-bottom: 20px;
+      }
       .calculators-container {
         display: flex;
-        flex-wrap: wrap; /* Mengizinkan item untuk pindah ke baris berikutnya */
-        justify-content: center; /* Memusatkan item secara horizontal */
-        gap: 20px; /* Jarak antar kalkulator */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
         width: 100%;
-        max-width: 1200px; /* Lebar maksimal untuk kontainer kalkulator */
+        max-width: 1200px;
       }
-
       .calculator-section {
         background-color: #ffffff;
         padding: 40px;
         border-radius: 12px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         text-align: center;
-        flex: 1 1 450px; /* Mengizinkan item fleksibel dengan lebar dasar 450px */
+        flex: 1 1 450px;
       }
       h2 {
         color: #333;
@@ -165,17 +167,18 @@
     </style>
   </head>
   <body>
-    <h1 class="main-header">KALKULATOR SUSENAS</h1>
+    <img src="logo.png" alt="Logo Perusahaan" class="logo" />
+    <h1 class="main-header">Kumpulan Kalkulator</h1>
 
     <div class="calculators-container">
       <div class="calculator-section">
-        <h2>Kalkulator Usia</h2>
+        <h2>Kalkulator Umur</h2>
         <div class="input-group">
           <label for="birthdate">Masukkan Tanggal Lahir Anda:</label>
           <input type="date" id="birthdate" />
         </div>
         <div class="button-group">
-          <button id="calculateBtn">Hitung Usia</button>
+          <button id="calculateBtn">Hitung Umur</button>
           <button id="resetAgeBtn" class="reset-btn">Reset</button>
         </div>
         <div id="resultAge" class="result"></div>
@@ -316,7 +319,7 @@
         </div>
         <div class="button-group">
           <button id="hitungListrikBtn">Hitung</button>
-          <button id="resetListrikBtn" class="reset-btn">Reset</button>
+          <button id="resetListrikBtn" class="reset-btn">Refresh</button>
         </div>
         <div class="result" id="hasilListrik"></div>
       </div>
