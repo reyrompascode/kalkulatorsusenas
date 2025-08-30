@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KALKULATOR SUSENAS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f0f2f5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        min-height: 100vh;
+        margin: 0;
+      }
+      .main-header {
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      /* Flexbox Container untuk semua kalkulator */
+      .calculators-container {
+        display: flex;
+        flex-wrap: wrap; /* Mengizinkan item untuk pindah ke baris berikutnya */
+        justify-content: center; /* Memusatkan item secara horizontal */
+        gap: 20px; /* Jarak antar kalkulator */
+        width: 100%;
+        max-width: 1200px; /* Lebar maksimal untuk kontainer kalkulator */
+      }
+
+      .calculator-section {
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        flex: 1 1 450px; /* Mengizinkan item fleksibel dengan lebar dasar 450px */
+      }
+      h2 {
+        color: #333;
+        margin-bottom: 25px;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 10px;
+      }
+      .input-group,
+      .form-group {
+        margin-bottom: 20px;
+        text-align: left;
+      }
+      label {
+        display: block;
+        margin-bottom: 8px;
+        color: #555;
+        font-weight: 600;
+      }
+      input[type="date"],
+      input[type="number"],
+      input[type="text"] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-sizing: border-box;
+        font-size: 16px;
+      }
+      .button-group {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+      }
+      button {
+        background-color: #007bff;
+        color: white;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      .reset-btn {
+        background-color: #6c757d;
+      }
+      .reset-btn:hover {
+        background-color: #5a6268;
+      }
+      .result {
+        margin-top: 25px;
+        font-size: 20px;
+        color: #28a745;
+        font-weight: 600;
+        min-height: 25px;
+      }
+      .footer {
+        width: 100%;
+        text-align: center;
+        color: #777;
+        margin-top: auto;
+        padding: 20px;
+      }
+
+      /* Styles for Kalkulator BPJS */
+      .radio-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 5px;
+      }
+      .radio-group div {
+        display: flex;
+        align-items: center;
+      }
+      .radio-group input[type="radio"] {
+        margin-right: 10px;
+        width: 16px;
+        height: 16px;
+      }
+
+      /* Styles for Dynamic Calculator */
+      #dynamic-inputs-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .input-row {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin: 5px 0;
+      }
+      .line-number {
+        font-family: monospace;
+        width: 30px;
+        text-align: right;
+        padding-right: 10px;
+        color: #6c757d;
+      }
+      input.value-input {
+        flex-grow: 1;
+      }
+
+      /* Styles for Electricity Calculator */
+      .radio-option {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+      }
+      .radio-option input {
+        margin-right: 10px;
+      }
+      #hasilListrik {
+        min-height: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="main-header">KALKULATOR SUSENAS</h1>
+
+    <div class="calculators-container">
+      <div class="calculator-section">
+        <h2>Kalkulator Usia</h2>
+        <div class="input-group">
+          <label for="birthdate">Masukkan Tanggal Lahir Anda:</label>
+          <input type="date" id="birthdate" />
+        </div>
+        <div class="button-group">
+          <button id="calculateBtn">Hitung Usia</button>
+          <button id="resetAgeBtn" class="reset-btn">Reset</button>
+        </div>
+        <div id="resultAge" class="result"></div>
+      </div>
+
+      <div class="calculator-section">
+        <h2>Kalkulator Iuran Bulanan BPJS</h2>
+        <div class="form-group">
+          <label for="jumlahOrangBPJS">Jumlah Orang:</label>
+          <input type="number" id="jumlahOrangBPJS" min="1" value="1" />
+        </div>
+        <div class="form-group">
+          <label>Pilihan Kelas:</label>
+          <div class="radio-group">
+            <div>
+              <input type="radio" id="pbi" name="kelas" value="pbi" checked />
+              <label for="pbi">PBI (Rp42.000)</label>
+            </div>
+            <div>
+              <input type="radio" id="kelas1" name="kelas" value="kelas1" />
+              <label for="kelas1">Kelas I (Rp150.000)</label>
+            </div>
+            <div>
+              <input type="radio" id="kelas2" name="kelas" value="kelas2" />
+              <label for="kelas2">Kelas II (Rp100.000)</label>
+            </div>
+            <div>
+              <input type="radio" id="kelas3" name="kelas" value="kelas3" />
+              <label for="kelas3">Kelas III (Rp35.000)</label>
+            </div>
+          </div>
+        </div>
+        <div class="button-group">
+          <button id="hitungBPJSBtn">Hitung</button>
+          <button id="resetBPJSBtn" class="reset-btn">Reset</button>
+        </div>
+        <div class="result">
+          <p>Total iuran bulanan BPJS yang harus dibayarkan:</p>
+          <h3 id="totalBayarBPJS">Rp0</h3>
+        </div>
+      </div>
+
+      <div class="calculator-section">
+        <h2>Kalkulator Penjumlahan Dinamis</h2>
+        <div id="dynamic-inputs-container">
+          <div class="input-row">
+            <span class="line-number">1.</span>
+            <input type="text" class="value-input" placeholder="Masukkan nilai..." />
+          </div>
+        </div>
+        <div class="button-group">
+          <button id="resetDynamicBtn" class="reset-btn">Reset</button>
+        </div>
+        <div class="result">
+          <p>Total Nilai: <span id="total-sum-dynamic">0</span></p>
+        </div>
+      </div>
+
+      <div class="calculator-section">
+        <h2>Kalkulator Listrik</h2>
+        <div class="form-group">
+          <label>Pilih Mode Perhitungan</label>
+          <div class="radio-group">
+            <div class="radio-option">
+              <input type="radio" name="modeListrik" value="hitungKWH" id="modeKWH" checked />
+              <label for="modeKWH">Hitung kWh (dari Rupiah)</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" name="modeListrik" value="hitungRupiah" id="modeRupiah" />
+              <label for="modeRupiah">Hitung Rupiah (dari kWh)</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" id="inputRupiah">
+          <label for="jumlahRupiah">Jumlah yang Dibayarkan (Rp)</label>
+          <input type="text" id="jumlahRupiah" placeholder="Masukkan jumlah uang" />
+        </div>
+        <div class="form-group" id="inputKWH" style="display: none">
+          <label for="jumlahKWH">Jumlah kWh Pemakaian</label>
+          <input type="text" id="jumlahKWH" placeholder="Masukkan jumlah kWh" />
+        </div>
+        <div class="form-group">
+          <label>Daya yang terpasang</label>
+          <div class="radio-group">
+            <div class="radio-option">
+              <input type="radio" name="dayaListrik" value="1352" id="daya1" />
+              <label for="daya1">R-1/TR 900 VA-RTM</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" name="dayaListrik" value="1444.70" id="daya2" />
+              <label for="daya2">R-1/TR 1.300 VA</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" name="dayaListrik" value="1444.70" id="daya3" />
+              <label for="daya3">R-1/TR 2.200 VA</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" name="dayaListrik" value="1699.53" id="daya4" />
+              <label for="daya4">R-2/TR 3.500 VA s.d. 5.500 VA</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" name="dayaListrik" value="1699.53" id="daya5" />
+              <label for="daya5">R-3/TR, TM 6.600 VA ke atas</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" name="dayaListrik" value="1444.70" id="daya6" />
+              <label for="daya6">B-2/TR 6.600 VA s.d. 200 kVA</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" name="dayaListrik" value="1035.78" id="daya7" />
+              <label for="daya7">B-3/TM, TT di atas 200 kVA</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" name="dayaListrik" value="1035.78" id="daya8" />
+              <label for="daya8">I-3/TM di atas 200 kVA</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" name="dayaListrik" value="996.74" id="daya9" />
+              <label for="daya9">I-4/TT 30.000 kVA ke atas</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" name="dayaListrik" value="1699.53" id="daya10" />
+              <label for="daya10">P-1/TR 6.600 VA s.d. 200 kVA</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" name="dayaListrik" value="1415.01" id="daya11" />
+              <label for="daya11">P-2/TM di atas 200 kVA</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" name="dayaListrik" value="1699.53" id="daya12" />
+              <label for="daya12">P-3/TR</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" name="dayaListrik" value="1644.52" id="daya13" />
+              <label for="daya13">L/TR, TM, TT</label>
+            </div>
+          </div>
+        </div>
+        <div class="button-group">
+          <button id="hitungListrikBtn">Hitung</button>
+          <button id="resetListrikBtn" class="reset-btn">Reset</button>
+        </div>
+        <div class="result" id="hasilListrik"></div>
+      </div>
+    </div>
+
+    <footer class="footer">BPS Kota Jakarta Barat Jaya Jaya Jaya</footer>
+
+    <script>
+      // --- Kalkulator Umur ---
+      const birthdateInput = document.getElementById("birthdate");
+      const calculateAgeBtn = document.getElementById("calculateBtn");
+      const resetAgeBtn = document.getElementById("resetAgeBtn");
+      const resultAgeDiv = document.getElementById("resultAge");
+
+      function calculateAge() {
+        const birthdateValue = birthdateInput.value;
+        if (!birthdateValue) {
+          resultAgeDiv.textContent = "Masukkan tanggal lahir.";
+          resultAgeDiv.style.color = "#dc3545";
+          return;
+        }
+
+        const birthdate = new Date(birthdateValue);
+        const today = new Date();
+        let years = today.getFullYear() - birthdate.getFullYear();
+        let months = today.getMonth() - birthdate.getMonth();
+        let days = today.getDate() - birthdate.getDate();
+
+        if (days < 0) {
+          months--;
+          const prevMonth = today.getMonth() === 0 ? 11 : today.getMonth() - 1;
+          const prevYear = today.getMonth() === 0 ? today.getFullYear() - 1 : today.getFullYear();
+          days += new Date(prevYear, prevMonth + 1, 0).getDate();
+        }
+        if (months < 0) {
+          years--;
+          months += 12;
+        }
+
+        resultAgeDiv.textContent = `Usia ${years} tahun, ${months} bulan, dan ${days} hari.`;
+        resultAgeDiv.style.color = "#28a745";
+      }
+
+      function resetAgeForm() {
+        birthdateInput.value = "";
+        resultAgeDiv.textContent = "";
+        resultAgeDiv.style.color = "#28a745";
+      }
+      calculateAgeBtn.addEventListener("click", calculateAge);
+      resetAgeBtn.addEventListener("click", resetAgeForm);
+
+      // --- Kalkulator BPJS ---
+      const hitungBPJSBtn = document.getElementById("hitungBPJSBtn");
+      const resetBPJSBtn = document.getElementById("resetBPJSBtn");
+      const jumlahOrangBPJSInput = document.getElementById("jumlahOrangBPJS");
+      const totalBayarBPJS = document.getElementById("totalBayarBPJS");
+
+      const biayaPerKelas = {
+        pbi: 42000,
+        kelas1: 150000,
+        kelas2: 100000,
+        kelas3: 35000,
+      };
+
+      hitungBPJSBtn.addEventListener("click", () => {
+        const jumlahOrang = parseInt(jumlahOrangBPJSInput.value);
+        const kelasDipilih = document.querySelector('input[name="kelas"]:checked').value;
+
+        if (isNaN(jumlahOrang) || jumlahOrang <= 0) {
+          alert("Masukkan jumlah orang yang valid (hanya angka dan lebih dari 0).");
+          totalBayarBPJS.textContent = "Rp0";
+          return;
+        }
+        if (biayaPerKelas[kelasDipilih]) {
+          const totalBiaya = jumlahOrang * biayaPerKelas[kelasDipilih];
+          totalBayarBPJS.textContent = `Rp${totalBiaya.toLocaleString("id-ID")}`;
+        }
+      });
+
+      resetBPJSBtn.addEventListener("click", () => {
+        jumlahOrangBPJSInput.value = 1;
+        document.getElementById("pbi").checked = true;
+        totalBayarBPJS.textContent = "Rp0";
+      });
+
+      // --- Kalkulator Dinamis ---
+      const inputsContainer = document.getElementById("dynamic-inputs-container");
+      const totalSumSpan = document.getElementById("total-sum-dynamic");
+      const resetButtonDynamic = document.getElementById("resetDynamicBtn");
+
+      const cleanNumber = (value) => value.replace(/\./g, "").replace(/,/g, ".");
+      const formatNumber = (value) => {
+        const cleanedValue = cleanNumber(value);
+        if (!cleanedValue) return "";
+        const parts = cleanedValue.split(".");
+        const integerPart = parseInt(parts[0]).toLocaleString("id-ID");
+        const decimalPart = parts[1];
+        if (decimalPart !== undefined) return integerPart + "," + decimalPart;
+        else return integerPart;
+      };
+
+      const updateSum = () => {
+        let total = 0;
+        let maxDecimalPlaces = 0;
+        const inputs = inputsContainer.querySelectorAll(".value-input");
+        inputs.forEach((input) => {
+          const value = cleanNumber(input.value);
+          const parsedValue = parseFloat(value) || 0;
+          total += parsedValue;
+          const decimalPart = value.split(".")[1] || "";
+          if (decimalPart.length > maxDecimalPlaces) maxDecimalPlaces = decimalPart.length;
+        });
+        if (maxDecimalPlaces > 0) totalSumSpan.textContent = total.toLocaleString("id-ID", { minimumFractionDigits: maxDecimalPlaces, maximumFractionDigits: maxDecimalPlaces });
+        else totalSumSpan.textContent = total.toLocaleString("id-ID", { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+      };
+
+      const addInputListeners = (input) => {
+        input.addEventListener("keyup", handleInput);
+        input.addEventListener("keypress", (e) => {
+          if (e.key === "Enter" || e.keyCode === 13) {
+            e.preventDefault();
+            addNewInput();
+          }
+        });
+      };
+
+      const handleInput = (event) => {
+        const input = event.target;
+        let value = input.value;
+        const sanitizedValue = value.replace(/[^0-9,.]/g, "");
+        if (value !== sanitizedValue) {
+          alert("Input hanya boleh berupa angka, koma, atau titik.");
+          input.value = sanitizedValue;
+          return;
+        }
+        const cursorPosition = input.selectionStart;
+        const separatorsBefore = (value.substring(0, cursorPosition).match(/\./g) || []).length;
+        input.value = formatNumber(value);
+        const newSeparatorsBefore = (input.value.substring(0, input.selectionStart).match(/\./g) || []).length;
+        input.selectionStart = cursorPosition + (newSeparatorsBefore - separatorsBefore);
+        input.selectionEnd = cursorPosition + (newSeparatorsBefore - separatorsBefore);
+        updateSum();
+      };
+
+      const addNewInput = () => {
+        const rowCount = inputsContainer.children.length;
+        const newRow = document.createElement("div");
+        newRow.className = "input-row";
+        const newNumber = document.createElement("span");
+        newNumber.className = "line-number";
+        newNumber.textContent = `${rowCount + 1}.`;
+        const newInput = document.createElement("input");
+        newInput.type = "text";
+        newInput.className = "value-input";
+        newInput.placeholder = "Masukkan nilai...";
+        newRow.appendChild(newNumber);
+        newRow.appendChild(newInput);
+        inputsContainer.appendChild(newRow);
+        newInput.focus();
+        addInputListeners(newInput);
+      };
+
+      const resetDynamicInputs = () => {
+        inputsContainer.innerHTML = `
+          <div class="input-row">
+            <span class="line-number">1.</span>
+            <input type="text" class="value-input" placeholder="Masukkan nilai...">
+          </div>`;
+        const initialInput = document.querySelector(".value-input");
+        initialInput.value = "";
+        initialInput.focus();
+        totalSumSpan.textContent = "0";
+        addInputListeners(initialInput);
+        updateSum();
+      };
+
+      const initialInput = document.querySelector(".value-input");
+      addInputListeners(initialInput);
+      resetButtonDynamic.addEventListener("click", resetDynamicInputs);
+      updateSum();
+
+      // --- Kalkulator Listrik ---
+      const modeRadiosListrik = document.getElementsByName("modeListrik");
+      const hitungListrikBtn = document.getElementById("hitungListrikBtn");
+      const resetListrikBtn = document.getElementById("resetListrikBtn");
+      const inputRupiahDiv = document.getElementById("inputRupiah");
+      const inputKWHDiv = document.getElementById("inputKWH");
+      const jumlahRupiahInput = document.getElementById("jumlahRupiah");
+      const jumlahKWHInput = document.getElementById("jumlahKWH");
+      const hasilListrikDiv = document.getElementById("hasilListrik");
+
+      function formatRupiah(input) {
+        let number_string = input.value.replace(/\./g, "").toString();
+        let split = number_string.split(",");
+        let sisa = split[0].length % 3;
+        let rupiah = split[0].substr(0, sisa);
+        let ribuan = split[0].substr(sisa).match(/\d{3}/gi);
+        if (ribuan) {
+          separator = sisa ? "." : "";
+          rupiah += separator + ribuan.join(".");
+        }
+        rupiah = split[1] !== undefined ? rupiah + "," + split[1] : rupiah;
+        input.value = rupiah;
+      }
+
+      function formatAngka(angka) {
+        const parts = angka.toString().split(".");
+        const rupiah = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        return rupiah + (parts[1] ? "," + parts[1] : "");
+      }
+
+      function hitungListrik() {
+        const mode = document.querySelector('input[name="modeListrik"]:checked').value;
+        hasilListrikDiv.innerHTML = "";
+        let hargaPerKWH = 0;
+        const radioButtonsDaya = document.getElementsByName("dayaListrik");
+        for (const radio of radioButtonsDaya) {
+          if (radio.checked) {
+            hargaPerKWH = parseFloat(radio.value);
+            break;
+          }
+        }
+        if (hargaPerKWH === 0) {
+          hasilListrikDiv.innerHTML = "⚠️ Mohon pilih daya yang digunakan.";
+          return;
+        }
+        if (mode === "hitungKWH") {
+          const jumlahRupiahRaw = jumlahRupiahInput.value;
+          const jumlahRupiah = parseFloat(jumlahRupiahRaw.replace(/\./g, "").replace(/,/g, "."));
+          if (isNaN(jumlahRupiah) || jumlahRupiah <= 0) {
+            hasilListrikDiv.innerHTML = "⚠️ Mohon masukkan jumlah uang yang valid.";
+            return;
+          }
+          const kwh = jumlahRupiah / hargaPerKWH;
+          hasilListrikDiv.innerHTML = `Konsumsi kWh adalah: <br> ${kwh.toFixed(2)} kWh`;
+        } else {
+          const jumlahKWH = parseFloat(jumlahKWHInput.value.replace(/,/g, "."));
+          if (isNaN(jumlahKWH) || jumlahKWH <= 0) {
+            hasilListrikDiv.innerHTML = "⚠️ Mohon masukkan jumlah kWh yang valid.";
+            return;
+          }
+          const totalRupiah = jumlahKWH * hargaPerKWH;
+          hasilListrikDiv.innerHTML = `Jumlah Rupiah yang harus dibayarkan adalah: <br> Rp ${formatAngka(totalRupiah.toFixed(2))}`;
+        }
+      }
+
+      function refreshListrik() {
+        jumlahRupiahInput.value = "";
+        jumlahKWHInput.value = "";
+        hasilListrikDiv.innerHTML = "";
+        const radioButtonsDaya = document.getElementsByName("dayaListrik");
+        for (const radio of radioButtonsDaya) {
+          radio.checked = false;
+        }
+        document.getElementById("modeKWH").checked = true;
+        inputRupiahDiv.style.display = "block";
+        inputKWHDiv.style.display = "none";
+      }
+
+      hitungListrikBtn.addEventListener("click", hitungListrik);
+      resetListrikBtn.addEventListener("click", refreshListrik);
+      jumlahRupiahInput.addEventListener("keyup", () => formatRupiah(jumlahRupiahInput));
+      jumlahKWHInput.addEventListener("keyup", () => {
+        jumlahKWHInput.value = jumlahKWHInput.value.replace(/[^0-9,.]/g, "");
+      });
+
+      for (const radio of modeRadiosListrik) {
+        radio.addEventListener("change", (e) => {
+          if (e.target.value === "hitungRupiah") {
+            inputRupiahDiv.style.display = "none";
+            inputKWHDiv.style.display = "block";
+          } else {
+            inputRupiahDiv.style.display = "block";
+            inputKWHDiv.style.display = "none";
+          }
+          hasilListrikDiv.innerHTML = "";
+        });
+      }
+    </script>
+  </body>
+</html>
