@@ -219,7 +219,7 @@
         <h2>Kalkulator Iuran Bulanan BPJS</h2>
         <div class="form-group">
           <label for="jumlahOrangBPJS">Jumlah Orang:</label>
-          <input type="number" id="jumlahOrangBPJS" min="1" value="1" />
+          <input type="number" id="jumlahOrangBPJS" min="1" step="1" oninput="this.value = Math.floor(this.value);" value="1" />
         </div>
         <div class="form-group">
           <label>Pilihan Kelas:</label>
@@ -304,15 +304,11 @@
             </div>
             <div class="radio-option">
               <input type="radio" name="dayaListrik" value="1035.78" id="daya7" />
-              <label for="daya7">B-3/TM, TT di atas 200 kVA</label>
+              <label for="daya7">I-3/TM di atas 200 kVA</label>
             </div>
             <div class="radio-option">
-              <input type="radio" name="dayaListrik" value="1035.78" id="daya8" />
-              <label for="daya8">I-3/TM di atas 200 kVA</label>
-            </div>
-            <div class="radio-option">
-              <input type="radio" name="dayaListrik" value="996.74" id="daya9" />
-              <label for="daya9">I-4/TT 30.000 kVA ke atas</label>
+              <input type="radio" name="dayaListrik" value="996.74" id="daya8" />
+              <label for="daya8">I-4/TT 30.000 kVA ke atas</label>
             </div>
             <div class="radio-option">
               <input type="radio" name="dayaListrik" value="1699.53" id="daya10" />
@@ -353,7 +349,7 @@
         </div>
         <div id="m3InputGroup" class="form-group" style="display: none">
           <label for="m3Input">Penggunaan Air (m³):</label>
-          <input type="number" id="m3Input" placeholder="Contoh: 15" required />
+          <input type="text" id="m3Input" placeholder="Contoh: 15,5" required />
         </div>
         <div class="form-group">
           <label>Pilih Kelompok Pelanggan:</label>
@@ -457,6 +453,15 @@
       const jumlahOrangBPJSInput = document.getElementById("jumlahOrangBPJS");
       const totalBayarBPJS = document.getElementById("totalBayarBPJS");
 
+      // Menambahkan event listener untuk validasi input
+      jumlahOrangBPJSInput.addEventListener("input", function(e) {
+        let value = e.target.value;
+        if (value.includes('.') || value.includes(',')) {
+            alert("Input jumlah orang harus berupa angka bulat.");
+            e.target.value = Math.floor(value);
+        }
+      });
+      
       const biayaPerKelas = {
         pbi: 42000,
         kelas1: 150000,
@@ -501,6 +506,21 @@
       const jumlahKWHInput = document.getElementById("jumlahKWH");
       const hasilListrikDiv = document.getElementById("hasilListrik");
 
+      // Validasi input kWh agar hanya menerima angka dan koma
+      jumlahKWHInput.addEventListener('input', function(e) {
+        const input = e.target;
+        // Ganti titik dengan koma secara otomatis
+        let value = input.value.replace(/\./g, ',');
+        // Hapus karakter selain angka dan koma
+        value = value.replace(/[^0-9,]/g, '');
+        // Pastikan hanya ada satu koma
+        const parts = value.split(',');
+        if (parts.length > 2) {
+          value = parts[0] + ',' + parts.slice(1).join('');
+        }
+        input.value = value;
+      });
+
       function formatRupiah(input) {
         let number_string = input.value.replace(/\./g, "").toString();
         let split = number_string.split(",");
@@ -513,10 +533,6 @@
         }
         rupiah = split[1] !== undefined ? rupiah + "," + split[1] : rupiah;
         input.value = rupiah;
-      }
-
-      function formatAngka(angka) {
-        return angka.toLocaleString("id-ID", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
       }
 
       function hitungListrik() {
@@ -570,9 +586,7 @@
       hitungListrikBtn.addEventListener("click", hitungListrik);
       resetListrikBtn.addEventListener("click", refreshListrik);
       jumlahRupiahInput.addEventListener("keyup", () => formatRupiah(jumlahRupiahInput));
-      jumlahKWHInput.addEventListener("keyup", () => {
-        jumlahKWHInput.value = jumlahKWHInput.value.replace(/[^0-9,.]/g, "");
-      });
+      
 
       for (const radio of modeRadiosListrik) {
         radio.addEventListener("change", (e) => {
@@ -611,11 +625,27 @@
       const hasilAirDiv = document.getElementById("hasilAir");
       const kelompokRadiosAir = document.getElementsByName("kelompok");
 
+      // Fungsi format input Rupiah
       function formatRupiahAir(input) {
         let nilai = input.value.replace(/\./g, "");
         let formatted = new Intl.NumberFormat("id-ID").format(nilai);
         input.value = formatted;
       }
+      
+      // Validasi input meter kubik (m3) agar hanya menerima angka dan koma
+      m3AirInput.addEventListener('input', function(e) {
+        const input = e.target;
+        // Ganti titik dengan koma secara otomatis
+        let value = input.value.replace(/\./g, ',');
+        // Hapus karakter selain angka dan koma
+        value = value.replace(/[^0-9,]/g, '');
+        // Pastikan hanya ada satu koma
+        const parts = value.split(',');
+        if (parts.length > 2) {
+          value = parts[0] + ',' + parts.slice(1).join('');
+        }
+        input.value = value;
+      });
 
       function hitungRupiahKeM3(totalRupiah, tarifKelompok) {
         let penggunaanAir = 0;
@@ -647,7 +677,7 @@
         if (sisaRupiah > 0) {
           penggunaanAir += sisaRupiah / tarifKelompok[2];
         }
-
+        
         return penggunaanAir.toLocaleString("id-ID", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
       }
 
@@ -697,8 +727,8 @@
           hasilAirDiv.innerHTML = `Jumlah tagihan Anda adalah **Rp ${totalRupiah.toLocaleString("id-ID")}**.<br>
                                  Berdasarkan tarif **${namaKelompok}**, perkiraan penggunaan air Anda adalah sekitar **${penggunaanAir} meter kubik**.<br>`;
         } else {
-          const totalM3 = parseFloat(m3AirInput.value);
-
+          const totalM3 = parseFloat(m3AirInput.value.replace(/,/g, "."));
+          
           if (isNaN(totalM3) || totalM3 <= 0) {
             hasilAirDiv.innerHTML = "⚠️ Masukkan jumlah penggunaan air yang valid (angka positif).";
             return;
