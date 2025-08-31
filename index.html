@@ -624,16 +624,27 @@
       const kelompokRadiosAir = document.getElementsByName("kelompok");
 
       rupiahAirInput.addEventListener("keyup", function (e) {
-        let input = e.target.value.replace(/\./g, "");
-        input = input.replace(/,/g, ".");
-        let number = parseFloat(input);
+        let input = e.target.value;
+        const formattedInput = input.replace(/[^0-9.]/g, ""); // Hapus semua karakter selain angka dan titik
 
-        if (isNaN(number)) {
-          e.target.value = "";
-          return;
+        // Hapus titik ganda
+        let parts = formattedInput.split(".");
+        if (parts.length > 2) {
+          input = parts[0] + "." + parts.slice(1).join("");
         }
 
-        e.target.value = number.toLocaleString("id-ID", { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+        // Hapus pemisah ribuan dan format ulang
+        let number_string = input.replace(/\./g, "").toString();
+        let split = number_string.split(",");
+        let sisa = split[0].length % 3;
+        let rupiah = split[0].substr(0, sisa);
+        let ribuan = split[0].substr(sisa).match(/\d{3}/gi);
+        if (ribuan) {
+          separator = sisa ? "." : "";
+          rupiah += separator + ribuan.join(".");
+        }
+        rupiah = split[1] !== undefined ? rupiah + "," + split[1] : rupiah;
+        e.target.value = rupiah;
       });
 
       m3AirInput.addEventListener("input", function (e) {
