@@ -195,6 +195,83 @@
         margin-right: 10px;
         transform: scale(1.2);
       }
+
+      /* Styles for Kalkulator Biaya Sekolah (SPP) from index1.html */
+      .result-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      .result-table th,
+      .result-table td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+      }
+      .result-table th {
+        background-color: #f2f2f2;
+        color: #555;
+      }
+      #totalBiaya-tahun,
+      #totalBiaya-triwulan,
+      #totalBiaya-bulan {
+        font-weight: bold;
+        color: #28a745;
+      }
+      .input-group label {
+        flex-basis: 150px;
+        color: #333;
+      }
+      .input-group input[type="number"] {
+        flex-grow: 1;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      /* Styles for Kalkulator KJP Plus from index2.html */
+      .radio-options {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .radio-options label {
+        cursor: pointer;
+        margin: 0;
+        flex-basis: auto;
+      }
+
+      .radio-options input[type="radio"] {
+        margin-right: 5px;
+      }
+
+      #tabel-perhitungan {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      #tabel-perhitungan th,
+      #tabel-perhitungan td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+      }
+
+      #tabel-perhitungan th {
+        background-color: #f2f2f2;
+        color: #333;
+      }
+
+      #tabel-perhitungan tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      .total-row {
+        font-weight: bold;
+        background-color: #e6f7ff !important;
+      }
     </style>
   </head>
   <body>
@@ -375,6 +452,177 @@
           <button id="resetAirBtn" class="reset-btn">Reset</button>
         </div>
         <div id="hasilAir" class="result"></div>
+      </div>
+
+      <div class="calculator-section">
+        <h2>Kalkulator Biaya Sekolah (SPP)</h2>
+        <p>Masukkan jumlah anak sesuai jenjang pendidikan:</p>
+
+        <div class="input-group">
+          <label for="sd">Jumlah Anak SD:</label>
+          <input type="number" id="sd" value="0" min="0" oninput="validateAndFix(this)" />
+        </div>
+        <div class="input-group">
+          <label for="smp">Jumlah Anak SMP:</label>
+          <input type="number" id="smp" value="0" min="0" oninput="validateAndFix(this)" />
+        </div>
+        <div class="input-group">
+          <label for="sma">Jumlah Anak SMA:</label>
+          <input type="number" id="sma" value="0" min="0" oninput="validateAndFix(this)" />
+        </div>
+        <div class="input-group">
+          <label for="smk">Jumlah Anak SMK:</label>
+          <input type="number" id="smk" value="0" min="0" oninput="validateAndFix(this)" />
+        </div>
+        <div class="input-group">
+          <label for="slb">Jumlah Anak SLB:</label>
+          <input type="number" id="slb" value="0" min="0" oninput="validateAndFix(this)" />
+        </div>
+
+        <div class="button-group">
+          <button id="hitungSPP">Hitung</button>
+          <button id="resetSPP" class="reset-btn">Reset</button>
+        </div>
+
+        <hr />
+
+        <h2>Hasil Perhitungan</h2>
+        <table class="result-table">
+          <thead>
+            <tr>
+              <th>Jenjang Pendidikan</th>
+              <th>Jumlah Anak</th>
+              <th>Biaya per Bulan</th>
+              <th>Biaya per Triwulan</th>
+              <th>Biaya per Tahun</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>SD</td>
+              <td id="sd-jumlah">0</td>
+              <td id="sd-total-bulan">Rp 0</td>
+              <td id="sd-total-triwulan">Rp 0</td>
+              <td id="sd-total-tahun">Rp 0</td>
+            </tr>
+            <tr>
+              <td>SMP</td>
+              <td id="smp-jumlah">0</td>
+              <td id="smp-total-bulan">Rp 0</td>
+              <td id="smp-total-triwulan">Rp 0</td>
+              <td id="smp-total-tahun">Rp 0</td>
+            </tr>
+            <tr>
+              <td>SMA</td>
+              <td id="sma-jumlah">0</td>
+              <td id="sma-total-bulan">Rp 0</td>
+              <td id="sma-total-triwulan">Rp 0</td>
+              <td id="sma-total-tahun">Rp 0</td>
+            </tr>
+            <tr>
+              <td>SMK</td>
+              <td id="smk-jumlah">0</td>
+              <td id="smk-total-bulan">Rp 0</td>
+              <td id="smk-total-triwulan">Rp 0</td>
+              <td id="smk-total-tahun">Rp 0</td>
+            </tr>
+            <tr>
+              <td>SLB</td>
+              <td id="slb-jumlah">0</td>
+              <td id="slb-total-bulan">Rp 0</td>
+              <td id="slb-total-triwulan">Rp 0</td>
+              <td id="slb-total-tahun">Rp 0</td>
+            </tr>
+            <tr>
+              <td colspan="2"><b>TOTAL KESELURUHAN</b></td>
+              <td id="totalBiaya-bulan">Rp 0</td>
+              <td id="totalBiaya-triwulan">Rp 0</td>
+              <td id="totalBiaya-tahun">Rp 0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="calculator-section">
+        <h2>Kalkulator KJP Plus</h2>
+        <p>Silakan masukkan jumlah anak di setiap jenjang pendidikan dan pilih jenis sekolah.</p>
+
+        <form id="kjp-form">
+          <div class="input-group">
+            <label for="sdKJP">Jumlah Anak SD/MI:</label>
+            <input type="number" id="sdKJP" value="0" min="0" oninput="validateInput(this)" />
+            <div class="radio-options">
+              <input type="radio" id="sd-negeri" name="sekolah-sd" value="negeri" checked />
+              <label for="sd-negeri">Negeri</label>
+              <input type="radio" id="sd-swasta" name="sekolah-sd" value="swasta" />
+              <label for="sd-swasta">Swasta</label>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="smpKJP">Jumlah Anak SMP/MTs:</label>
+            <input type="number" id="smpKJP" value="0" min="0" oninput="validateInput(this)" />
+            <div class="radio-options">
+              <input type="radio" id="smp-negeri" name="sekolah-smp" value="negeri" checked />
+              <label for="smp-negeri">Negeri</label>
+              <input type="radio" id="smp-swasta" name="sekolah-smp" value="swasta" />
+              <label for="smp-swasta">Swasta</label>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="smaKJP">Jumlah Anak SMA/MA:</label>
+            <input type="number" id="smaKJP" value="0" min="0" oninput="validateInput(this)" />
+            <div class="radio-options">
+              <input type="radio" id="sma-negeri" name="sekolah-sma" value="negeri" checked />
+              <label for="sma-negeri">Negeri</label>
+              <input type="radio" id="sma-swasta" name="sekolah-sma" value="swasta" />
+              <label for="sma-swasta">Swasta</label>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="smkKJP">Jumlah Anak SMK:</label>
+            <input type="number" id="smkKJP" value="0" min="0" oninput="validateInput(this)" />
+            <div class="radio-options">
+              <input type="radio" id="smk-negeri" name="sekolah-smk" value="negeri" checked />
+              <label for="smk-negeri">Negeri</label>
+              <input type="radio" id="smk-swasta" name="sekolah-smk" value="swasta" />
+              <label for="smk-swasta">Swasta</label>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="pkbmKJP">Jumlah Anak PKBM:</label>
+            <input type="number" id="pkbmKJP" value="0" min="0" oninput="validateInput(this)" />
+          </div>
+
+          <div class="button-group">
+            <button type="button" id="hitungKJP">Hitung</button>
+            <button type="button" id="resetKJP" class="reset-btn">Reset</button>
+          </div>
+        </form>
+
+        <table id="tabel-perhitungan">
+          <thead>
+            <tr>
+              <th>Jenjang</th>
+              <th>Jumlah Anak</th>
+              <th>Dana Per Bulan</th>
+              <th>Dana Per Triwulan</th>
+              <th>Dana Per Tahun</th>
+            </tr>
+          </thead>
+          <tbody id="tabel-body"></tbody>
+          <tfoot>
+            <tr class="total-row">
+              <td colspan="2">TOTAL KESELURUHAN</td>
+              <td id="total-per-bulan"></td>
+              <td id="total-per-triwulan"></td>
+              <td id="total-per-tahun"></td>
+            </tr>
+          </tfoot>
+        </table>
       </div>
 
       <div class="calculator-section">
@@ -704,7 +952,10 @@
           penggunaanAir += sisaRupiah / tarifKelompok[2];
         }
 
-        return penggunaanAir.toLocaleString("id-ID", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        return penggunaanAir.toLocaleString("id-ID", {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2,
+        });
       }
 
       function hitungM3KeRupiah(totalM3, tarifKelompok) {
@@ -796,6 +1047,245 @@
       hitungAirBtn.addEventListener("click", hitungAir);
       resetAirBtn.addEventListener("click", resetAirForm);
 
+      // --- Kalkulator Biaya Sekolah (SPP) ---
+      function validateAndFix(input) {
+        let value = input.value;
+        value = value.replace(/[^0-9]/g, "");
+
+        if (value.length > 1 && value.startsWith("0")) {
+          value = parseInt(value, 10).toString();
+        }
+
+        input.value = value;
+      }
+      document.getElementById("hitungSPP").addEventListener("click", function () {
+        const sd_anak = parseInt(document.getElementById("sd").value) || 0;
+        const smp_anak = parseInt(document.getElementById("smp").value) || 0;
+        const sma_anak = parseInt(document.getElementById("sma").value) || 0;
+        const smk_anak = parseInt(document.getElementById("smk").value) || 0;
+        const slb_anak = parseInt(document.getElementById("slb").value) || 0;
+
+        const biaya_sd = 1010000;
+        const biaya_smp = 1240000;
+        const biaya_sma = 1680000;
+        const biaya_smk = 1800000;
+        const biaya_slb = 3930000;
+
+        const total_sd_tahun = sd_anak * biaya_sd;
+        const total_smp_tahun = smp_anak * biaya_smp;
+        const total_sma_tahun = sma_anak * biaya_sma;
+        const total_smk_tahun = smk_anak * biaya_smk;
+        const total_slb_tahun = slb_anak * biaya_slb;
+
+        const total_sd_triwulan = total_sd_tahun / 4;
+        const total_sd_bulan = total_sd_tahun / 12;
+
+        const total_smp_triwulan = total_smp_tahun / 4;
+        const total_smp_bulan = total_smp_tahun / 12;
+
+        const total_sma_triwulan = total_sma_tahun / 4;
+        const total_sma_bulan = total_sma_tahun / 12;
+
+        const total_smk_triwulan = total_smk_tahun / 4;
+        const total_smk_bulan = total_smk_tahun / 12;
+
+        const total_slb_triwulan = total_slb_tahun / 4;
+        const total_slb_bulan = total_slb_tahun / 12;
+
+        const total_keseluruhan_tahun = total_sd_tahun + total_smp_tahun + total_sma_tahun + total_smk_tahun + total_slb_tahun;
+        const total_keseluruhan_triwulan = total_keseluruhan_tahun / 4;
+        const total_keseluruhan_bulan = total_keseluruhan_tahun / 12;
+
+        document.getElementById("sd-jumlah").innerText = sd_anak;
+        document.getElementById("smp-jumlah").innerText = smp_anak;
+        document.getElementById("sma-jumlah").innerText = sma_anak;
+        document.getElementById("smk-jumlah").innerText = smk_anak;
+        document.getElementById("slb-jumlah").innerText = slb_anak;
+
+        const formatRupiah = (angka) => {
+          const formatter = new Intl.NumberFormat("id-ID", {
+            style: "currency",
+            currency: "IDR",
+            minimumFractionDigits: 0,
+          });
+          return formatter.format(angka);
+        };
+
+        document.getElementById("sd-total-tahun").innerText = formatRupiah(total_sd_tahun);
+        document.getElementById("sd-total-triwulan").innerText = formatRupiah(total_sd_triwulan);
+        document.getElementById("sd-total-bulan").innerText = formatRupiah(total_sd_bulan);
+
+        document.getElementById("smp-total-tahun").innerText = formatRupiah(total_smp_tahun);
+        document.getElementById("smp-total-triwulan").innerText = formatRupiah(total_smp_triwulan);
+        document.getElementById("smp-total-bulan").innerText = formatRupiah(total_smp_bulan);
+
+        document.getElementById("sma-total-tahun").innerText = formatRupiah(total_sma_tahun);
+        document.getElementById("sma-total-triwulan").innerText = formatRupiah(total_sma_triwulan);
+        document.getElementById("sma-total-bulan").innerText = formatRupiah(total_sma_bulan);
+
+        document.getElementById("smk-total-tahun").innerText = formatRupiah(total_smk_tahun);
+        document.getElementById("smk-total-triwulan").innerText = formatRupiah(total_smk_triwulan);
+        document.getElementById("smk-total-bulan").innerText = formatRupiah(total_smk_bulan);
+
+        document.getElementById("slb-total-tahun").innerText = formatRupiah(total_slb_tahun);
+        document.getElementById("slb-total-triwulan").innerText = formatRupiah(total_slb_triwulan);
+        document.getElementById("slb-total-bulan").innerText = formatRupiah(total_slb_bulan);
+
+        document.getElementById("totalBiaya-tahun").innerText = formatRupiah(total_keseluruhan_tahun);
+        document.getElementById("totalBiaya-triwulan").innerText = formatRupiah(total_keseluruhan_triwulan);
+        document.getElementById("totalBiaya-bulan").innerText = formatRupiah(total_keseluruhan_bulan);
+      });
+
+      document.getElementById("resetSPP").addEventListener("click", function () {
+        document.getElementById("sd").value = 0;
+        document.getElementById("smp").value = 0;
+        document.getElementById("sma").value = 0;
+        document.getElementById("smk").value = 0;
+        document.getElementById("slb").value = 0;
+
+        document.getElementById("sd-jumlah").innerText = "0";
+        document.getElementById("smp-jumlah").innerText = "0";
+        document.getElementById("sma-jumlah").innerText = "0";
+        document.getElementById("smk-jumlah").innerText = "0";
+        document.getElementById("slb-jumlah").innerText = "0";
+
+        document.getElementById("sd-total-tahun").innerText = "Rp 0";
+        document.getElementById("sd-total-triwulan").innerText = "Rp 0";
+        document.getElementById("sd-total-bulan").innerText = "Rp 0";
+
+        document.getElementById("smp-total-tahun").innerText = "Rp 0";
+        document.getElementById("smp-total-triwulan").innerText = "Rp 0";
+        document.getElementById("smp-total-bulan").innerText = "Rp 0";
+
+        document.getElementById("sma-total-tahun").innerText = "Rp 0";
+        document.getElementById("sma-total-triwulan").innerText = "Rp 0";
+        document.getElementById("sma-total-bulan").innerText = "Rp 0";
+
+        document.getElementById("smk-total-tahun").innerText = "Rp 0";
+        document.getElementById("smk-total-triwulan").innerText = "Rp 0";
+        document.getElementById("smk-total-bulan").innerText = "Rp 0";
+
+        document.getElementById("slb-total-tahun").innerText = "Rp 0";
+        document.getElementById("slb-total-triwulan").innerText = "Rp 0";
+        document.getElementById("slb-total-bulan").innerText = "Rp 0";
+
+        document.getElementById("totalBiaya-tahun").innerText = "Rp 0";
+        document.getElementById("totalBiaya-triwulan").innerText = "Rp 0";
+        document.getElementById("totalBiaya-bulan").innerText = "Rp 0";
+      });
+
+      // --- Kalkulator KJP Plus ---
+      function validateInput(input) {
+        let value = input.value;
+        value = value.replace(/[^0-9]/g, "");
+
+        if (value.length > 1 && value.startsWith("0")) {
+          value = value.substring(1);
+        }
+
+        if (value === "" || parseInt(value) < 0) {
+          input.value = "0";
+        } else {
+          input.value = value;
+        }
+      }
+
+      const dataKJP = {
+        sd: { label: "SD/MI", personal: 250000, sppSwasta: 130000 },
+        smp: { label: "SMP/MTs", personal: 300000, sppSwasta: 170000 },
+        sma: { label: "SMA/MA", personal: 420000, sppSwasta: 290000 },
+        smk: { label: "SMK", personal: 450000, sppSwasta: 240000 },
+        pkbm: { label: "PKBM", personal: 300000, sppSwasta: 0 },
+      };
+
+      function updateTableKJP() {
+        let totalBulan = 0;
+        let totalTriwulan = 0;
+        let totalTahun = 0;
+        const tabelBody = document.getElementById("tabel-body");
+        tabelBody.innerHTML = "";
+
+        const jenjangList = [
+          {
+            id: "sd",
+            count: document.getElementById("sdKJP").value,
+            school: document.querySelector('input[name="sekolah-sd"]:checked').value,
+          },
+          {
+            id: "smp",
+            count: document.getElementById("smpKJP").value,
+            school: document.querySelector('input[name="sekolah-smp"]:checked').value,
+          },
+          {
+            id: "sma",
+            count: document.getElementById("smaKJP").value,
+            school: document.querySelector('input[name="sekolah-sma"]:checked').value,
+          },
+          {
+            id: "smk",
+            count: document.getElementById("smkKJP").value,
+            school: document.querySelector('input[name="sekolah-smk"]:checked').value,
+          },
+          {
+            id: "pkbm",
+            count: document.getElementById("pkbmKJP").value,
+            school: "negeri",
+          },
+        ];
+
+        jenjangList.forEach((item) => {
+          const count = parseInt(item.count) || 0;
+          let danaPerBulan = count * dataKJP[item.id].personal;
+          let jenisSekolahLabel = "Negeri";
+
+          if (item.school === "swasta") {
+            danaPerBulan += count * dataKJP[item.id].sppSwasta;
+            jenisSekolahLabel = "Swasta";
+          }
+
+          const danaPerTriwulan = danaPerBulan * 3;
+          const danaPerTahun = danaPerBulan * 12;
+
+          totalBulan += danaPerBulan;
+          totalTriwulan += danaPerTriwulan;
+          totalTahun += danaPerTahun;
+
+          const row = `
+                    <tr>
+                        <td>${dataKJP[item.id].label} (${jenisSekolahLabel})</td>
+                        <td>${count}</td>
+                        <td>Rp ${danaPerBulan.toLocaleString("id-ID")}</td>
+                        <td>Rp ${danaPerTriwulan.toLocaleString("id-ID")}</td>
+                        <td>Rp ${danaPerTahun.toLocaleString("id-ID")}</td>
+                    </tr>
+                `;
+          tabelBody.innerHTML += row;
+        });
+
+        document.getElementById("total-per-bulan").textContent = `Rp ${totalBulan.toLocaleString("id-ID")}`;
+        document.getElementById("total-per-triwulan").textContent = `Rp ${totalTriwulan.toLocaleString("id-ID")}`;
+        document.getElementById("total-per-tahun").textContent = `Rp ${totalTahun.toLocaleString("id-ID")}`;
+      }
+
+      function resetFormKJP() {
+        document.getElementById("sdKJP").value = 0;
+        document.getElementById("smpKJP").value = 0;
+        document.getElementById("smaKJP").value = 0;
+        document.getElementById("smkKJP").value = 0;
+        document.getElementById("pkbmKJP").value = 0;
+
+        document.getElementById("sd-negeri").checked = true;
+        document.getElementById("smp-negeri").checked = true;
+        document.getElementById("sma-negeri").checked = true;
+        document.getElementById("smk-negeri").checked = true;
+
+        updateTableKJP();
+      }
+
+      document.getElementById("hitungKJP").addEventListener("click", updateTableKJP);
+      document.getElementById("resetKJP").addEventListener("click", resetFormKJP);
+      document.addEventListener("DOMContentLoaded", updateTableKJP);
+
       // --- Kalkulator Dinamis ---
       const inputsContainer = document.getElementById("dynamic-inputs-container");
       const totalSumSpan = document.getElementById("total-sum-dynamic");
@@ -823,8 +1313,16 @@
           const decimalPart = value.split(".")[1] || "";
           if (decimalPart.length > maxDecimalPlaces) maxDecimalPlaces = decimalPart.length;
         });
-        if (maxDecimalPlaces > 0) totalSumSpan.textContent = total.toLocaleString("id-ID", { minimumFractionDigits: maxDecimalPlaces, maximumFractionDigits: maxDecimalPlaces });
-        else totalSumSpan.textContent = total.toLocaleString("id-ID", { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+        if (maxDecimalPlaces > 0)
+          totalSumSpan.textContent = total.toLocaleString("id-ID", {
+            minimumFractionDigits: maxDecimalPlaces,
+            maximumFractionDigits: maxDecimalPlaces,
+          });
+        else
+          totalSumSpan.textContent = total.toLocaleString("id-ID", {
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 0,
+          });
       };
 
       const addInputListeners = (input) => {
@@ -896,12 +1394,13 @@
       const resetAllBtn = document.getElementById("resetAllBtn");
 
       function resetAllCalculators() {
-        // Panggil semua fungsi reset
         resetAgeForm();
         resetBPJSBtn.click();
         resetDynamicInputs();
         refreshListrik();
         resetAirForm();
+        resetSPP.click(); // Reset Kalkulator SPP
+        resetFormKJP(); // Reset Kalkulator KJP Plus
       }
       resetAllBtn.addEventListener("click", resetAllCalculators);
     </script>
