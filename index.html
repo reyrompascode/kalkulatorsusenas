@@ -6,7 +6,10 @@
     <title>KALKULATOR SUSENAS</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <style>
       body {
         font-family: "Poppins", sans-serif;
@@ -272,6 +275,22 @@
         font-weight: bold;
         background-color: #e6f7ff !important;
       }
+
+      /* START: Perbaikan Mobile (added by Gemini) */
+      @media (max-width: 768px) {
+        .calculators-container {
+          flex-direction: column;
+          gap: 20px;
+          padding: 0 10px; /* Menambahkan padding horizontal pada kontainer utama */
+        }
+        .calculator-section {
+          width: 100%;
+          padding: 20px; /* Menyesuaikan padding untuk tampilan mobile */
+          box-sizing: border-box;
+          flex-basis: auto;
+        }
+      }
+      /* END: Perbaikan Mobile */
     </style>
   </head>
   <body>
@@ -296,7 +315,14 @@
         <h2>Kalkulator Iuran Bulanan BPJS</h2>
         <div class="form-group">
           <label for="jumlahOrangBPJS">Jumlah Orang:</label>
-          <input type="number" id="jumlahOrangBPJS" min="1" step="1" oninput="this.value = Math.floor(this.value);" value="0" />
+          <input
+            type="number"
+            id="jumlahOrangBPJS"
+            min="1"
+            step="1"
+            oninput="this.value = Math.floor(this.value);"
+            value="0"
+          />
         </div>
         <div class="form-group">
           <label>Pilihan Kelas:</label>
@@ -420,31 +446,77 @@
         <h2>Kalkulator Tagihan Air</h2>
         <div class="form-group">
           <div class="mode-group">
-            <label><input type="radio" name="modeAir" value="rupiah-to-m3" checked /> Rupiah ke m³</label>
-            <label><input type="radio" name="modeAir" value="m3-to-rupiah" /> m³ ke Rupiah</label>
+            <label
+              ><input type="radio" name="modeAir" value="rupiah-to-m3" checked />
+              Rupiah ke m³</label
+            >
+            <label
+              ><input type="radio" name="modeAir" value="m3-to-rupiah" /> m³ ke
+              Rupiah</label
+            >
           </div>
         </div>
         <div id="rupiahInputGroup" class="form-group">
           <label for="rupiahInput">Jumlah Tagihan (Rupiah):</label>
-          <input type="text" id="rupiahInput" placeholder="Contoh: 50.000" required />
+          <input
+            type="text"
+            id="rupiahInput"
+            placeholder="Contoh: 50.000"
+            required
+          />
         </div>
         <div id="m3InputGroup" class="form-group" style="display: none">
           <label for="m3Input">Penggunaan Air (m³):</label>
-          <input type="text" id="m3Input" placeholder="Contoh: 15,5" required />
+          <input
+            type="text"
+            id="m3Input"
+            placeholder="Contoh: 15,5"
+            required
+          />
         </div>
         <div class="form-group">
           <label>Pilih Kelompok Pelanggan:</label>
           <div class="radio-group">
-            <label class="radio-item"><input type="radio" name="kelompok" value="KI" /> 1. KI (Bangunan Sosial, Hidran Kebakaran, dll)</label>
-            <label class="radio-item"><input type="radio" name="kelompok" value="rsh" /> 2. Rumah Susun Sangat Sederhana</label>
-            <label class="radio-item"><input type="radio" name="kelompok" value="rts1" /> 3. Rumah Tangga Sangat Sederhana II</label>
-            <label class="radio-item"><input type="radio" name="kelompok" value="rssp" /> 4. Rumah Susun Sederhana Sewa-Pemerintah</label>
-            <label class="radio-item"><input type="radio" name="kelompok" value="rts2" /> 5. Rumah Tangga Sederhana I</label>
-            <label class="radio-item"><input type="radio" name="kelompok" value="rts3" /> 6. Rumah Tangga Sederhana II</label>
-            <label class="radio-item"><input type="radio" name="kelompok" value="rtm1" /> 7. Rumah Tangga Menengah I</label>
-            <label class="radio-item"><input type="radio" name="kelompok" value="rtm2" /> 8. Rumah Tangga Menengah II</label>
-            <label class="radio-item"><input type="radio" name="kelompok" value="rtam1" /> 9. Rumah Tangga Di Atas Menengah I</label>
-            <label class="radio-item"><input type="radio" name="kelompok" value="rtam2" /> 10. Rumah Tangga Di Atas Menengah II</label>
+            <label class="radio-item"
+              ><input type="radio" name="kelompok" value="KI" /> 1. KI
+              (Bangunan Sosial, Hidran Kebakaran, dll)</label
+            >
+            <label class="radio-item"
+              ><input type="radio" name="kelompok" value="rsh" /> 2. Rumah Susun
+              Sangat Sederhana</label
+            >
+            <label class="radio-item"
+              ><input type="radio" name="kelompok" value="rts1" /> 3. Rumah
+              Tangga Sangat Sederhana II</label
+            >
+            <label class="radio-item"
+              ><input type="radio" name="kelompok" value="rssp" /> 4. Rumah
+              Susun Sederhana Sewa-Pemerintah</label
+            >
+            <label class="radio-item"
+              ><input type="radio" name="kelompok" value="rts2" /> 5. Rumah
+              Tangga Sederhana I</label
+            >
+            <label class="radio-item"
+              ><input type="radio" name="kelompok" value="rts3" /> 6. Rumah
+              Tangga Sederhana II</label
+            >
+            <label class="radio-item"
+              ><input type="radio" name="kelompok" value="rtm1" /> 7. Rumah
+              Tangga Menengah I</label
+            >
+            <label class="radio-item"
+              ><input type="radio" name="kelompok" value="rtm2" /> 8. Rumah
+              Tangga Menengah II</label
+            >
+            <label class="radio-item"
+              ><input type="radio" name="kelompok" value="rtam1" /> 9. Rumah
+              Tangga Di Atas Menengah I</label
+            >
+            <label class="radio-item"
+              ><input type="radio" name="kelompok" value="rtam2" /> 10. Rumah
+              Tangga Di Atas Menengah II</label
+            >
           </div>
         </div>
         <div class="button-group">
@@ -455,28 +527,58 @@
       </div>
 
       <div class="calculator-section">
-        <h2>Kalkulator Biaya Sekolah (SPP) Subsidi BOS</h2>
+        <h2>Kalkulator Biaya Sekolah (SPP)</h2>
         <p>Masukkan jumlah anak sesuai jenjang pendidikan:</p>
 
         <div class="input-group">
           <label for="sd">Jumlah Anak SD:</label>
-          <input type="number" id="sd" value="0" min="0" oninput="validateAndFix(this)" />
+          <input
+            type="number"
+            id="sd"
+            value="0"
+            min="0"
+            oninput="validateAndFix(this)"
+          />
         </div>
         <div class="input-group">
           <label for="smp">Jumlah Anak SMP:</label>
-          <input type="number" id="smp" value="0" min="0" oninput="validateAndFix(this)" />
+          <input
+            type="number"
+            id="smp"
+            value="0"
+            min="0"
+            oninput="validateAndFix(this)"
+          />
         </div>
         <div class="input-group">
           <label for="sma">Jumlah Anak SMA:</label>
-          <input type="number" id="sma" value="0" min="0" oninput="validateAndFix(this)" />
+          <input
+            type="number"
+            id="sma"
+            value="0"
+            min="0"
+            oninput="validateAndFix(this)"
+          />
         </div>
         <div class="input-group">
           <label for="smk">Jumlah Anak SMK:</label>
-          <input type="number" id="smk" value="0" min="0" oninput="validateAndFix(this)" />
+          <input
+            type="number"
+            id="smk"
+            value="0"
+            min="0"
+            oninput="validateAndFix(this)"
+          />
         </div>
         <div class="input-group">
           <label for="slb">Jumlah Anak SLB:</label>
-          <input type="number" id="slb" value="0" min="0" oninput="validateAndFix(this)" />
+          <input
+            type="number"
+            id="slb"
+            value="0"
+            min="0"
+            oninput="validateAndFix(this)"
+          />
         </div>
 
         <div class="button-group">
@@ -545,56 +647,133 @@
 
       <div class="calculator-section">
         <h2>Kalkulator KJP Plus</h2>
-        <p>Silakan masukkan jumlah anak di setiap jenjang pendidikan dan pilih jenis sekolah.</p>
+        <p>
+          Silakan masukkan jumlah anak di setiap jenjang pendidikan dan pilih
+          jenis sekolah.
+        </p>
 
         <form id="kjp-form">
           <div class="input-group">
             <label for="sdKJP">Jumlah Anak SD/MI:</label>
-            <input type="number" id="sdKJP" value="0" min="0" oninput="validateInput(this)" />
+            <input
+              type="number"
+              id="sdKJP"
+              value="0"
+              min="0"
+              oninput="validateInput(this)"
+            />
             <div class="radio-options">
-              <input type="radio" id="sd-negeri" name="sekolah-sd" value="negeri" checked />
+              <input
+                type="radio"
+                id="sd-negeri"
+                name="sekolah-sd"
+                value="negeri"
+                checked
+              />
               <label for="sd-negeri">Negeri</label>
-              <input type="radio" id="sd-swasta" name="sekolah-sd" value="swasta" />
+              <input
+                type="radio"
+                id="sd-swasta"
+                name="sekolah-sd"
+                value="swasta"
+              />
               <label for="sd-swasta">Swasta</label>
             </div>
           </div>
 
           <div class="input-group">
             <label for="smpKJP">Jumlah Anak SMP/MTs:</label>
-            <input type="number" id="smpKJP" value="0" min="0" oninput="validateInput(this)" />
+            <input
+              type="number"
+              id="smpKJP"
+              value="0"
+              min="0"
+              oninput="validateInput(this)"
+            />
             <div class="radio-options">
-              <input type="radio" id="smp-negeri" name="sekolah-smp" value="negeri" checked />
+              <input
+                type="radio"
+                id="smp-negeri"
+                name="sekolah-smp"
+                value="negeri"
+                checked
+              />
               <label for="smp-negeri">Negeri</label>
-              <input type="radio" id="smp-swasta" name="sekolah-smp" value="swasta" />
+              <input
+                type="radio"
+                id="smp-swasta"
+                name="sekolah-smp"
+                value="swasta"
+              />
               <label for="smp-swasta">Swasta</label>
             </div>
           </div>
 
           <div class="input-group">
             <label for="smaKJP">Jumlah Anak SMA/MA:</label>
-            <input type="number" id="smaKJP" value="0" min="0" oninput="validateInput(this)" />
+            <input
+              type="number"
+              id="smaKJP"
+              value="0"
+              min="0"
+              oninput="validateInput(this)"
+            />
             <div class="radio-options">
-              <input type="radio" id="sma-negeri" name="sekolah-sma" value="negeri" checked />
+              <input
+                type="radio"
+                id="sma-negeri"
+                name="sekolah-sma"
+                value="negeri"
+                checked
+              />
               <label for="sma-negeri">Negeri</label>
-              <input type="radio" id="sma-swasta" name="sekolah-sma" value="swasta" />
+              <input
+                type="radio"
+                id="sma-swasta"
+                name="sekolah-sma"
+                value="swasta"
+              />
               <label for="sma-swasta">Swasta</label>
             </div>
           </div>
 
           <div class="input-group">
             <label for="smkKJP">Jumlah Anak SMK:</label>
-            <input type="number" id="smkKJP" value="0" min="0" oninput="validateInput(this)" />
+            <input
+              type="number"
+              id="smkKJP"
+              value="0"
+              min="0"
+              oninput="validateInput(this)"
+            />
             <div class="radio-options">
-              <input type="radio" id="smk-negeri" name="sekolah-smk" value="negeri" checked />
+              <input
+                type="radio"
+                id="smk-negeri"
+                name="sekolah-smk"
+                value="negeri"
+                checked
+              />
               <label for="smk-negeri">Negeri</label>
-              <input type="radio" id="smk-swasta" name="sekolah-smk" value="swasta" />
+              <input
+                type="radio"
+                id="smk-swasta"
+                name="sekolah-smk"
+                value="swasta"
+              />
               <label for="smk-swasta">Swasta</label>
             </div>
           </div>
 
           <div class="input-group">
             <label for="pkbmKJP">Jumlah Anak PKBM:</label>
-            <input type="number" id="pkbmKJP" value="0" min="0" oninput="validateInput(this)" />
+            <input
+              type="number"
+              id="pkbmKJP"
+              value="0"
+              min="0"
+              oninput="validateInput(this)"
+            />
           </div>
 
           <div class="button-group">
@@ -630,14 +809,20 @@
         <div id="dynamic-inputs-container">
           <div class="input-row">
             <span class="line-number">1.</span>
-            <input type="text" class="value-input" placeholder="Masukkan nilai..." />
+            <input
+              type="text"
+              class="value-input"
+              placeholder="Masukkan nilai..."
+            />
           </div>
         </div>
         <div class="button-group">
           <button id="resetDynamicBtn" class="reset-btn">Reset</button>
         </div>
         <div class="result">
-          <p>Total Nilai: <span id="total-sum-dynamic">0</span></p>
+          <p>
+            Total Nilai: <span id="total-sum-dynamic">0</span>
+          </p>
         </div>
       </div>
     </div>
@@ -679,7 +864,8 @@
         if (days < 0) {
           months--;
           const prevMonth = today.getMonth() === 0 ? 11 : today.getMonth() - 1;
-          const prevYear = today.getMonth() === 0 ? today.getFullYear() - 1 : today.getFullYear();
+          const prevYear =
+            today.getMonth() === 0 ? today.getFullYear() - 1 : today.getFullYear();
           days += new Date(prevYear, prevMonth + 1, 0).getDate();
         }
         if (months < 0) {
@@ -704,7 +890,9 @@
       const resetBPJSBtn = document.getElementById("resetBPJSBtn");
       const jumlahOrangBPJSInput = document.getElementById("jumlahOrangBPJS");
       const totalBayarBPJS = document.getElementById("totalBayarBPJS");
-      const totalBayarBPJStahunan = document.getElementById("totalBayarBPJStahunan");
+      const totalBayarBPJStahunan = document.getElementById(
+        "totalBayarBPJStahunan"
+      );
 
       jumlahOrangBPJSInput.addEventListener("input", function (e) {
         let value = e.target.value;
@@ -742,8 +930,12 @@
         const totalBiayaBulanan = jumlahOrang * biayaPerKelas[kelasDipilih.value];
         const totalBiayaTahunan = totalBiayaBulanan * 12;
 
-        totalBayarBPJS.textContent = `Rp${totalBiayaBulanan.toLocaleString("id-ID")}`;
-        totalBayarBPJStahunan.textContent = `Rp${totalBiayaTahunan.toLocaleString("id-ID")}`;
+        totalBayarBPJS.textContent = `Rp${totalBiayaBulanan.toLocaleString(
+          "id-ID"
+        )}`;
+        totalBayarBPJStahunan.textContent = `Rp${totalBiayaTahunan.toLocaleString(
+          "id-ID"
+        )}`;
       });
 
       resetBPJSBtn.addEventListener("click", () => {
@@ -794,7 +986,8 @@
       }
 
       function hitungListrik() {
-        const mode = document.querySelector('input[name="modeListrik"]:checked').value;
+        const mode = document.querySelector('input[name="modeListrik"]:checked')
+          .value;
         hasilListrikDiv.innerHTML = "";
         let hargaPerKWH = 0;
         const radioButtonsDaya = document.getElementsByName("dayaListrik");
@@ -810,13 +1003,19 @@
         }
         if (mode === "hitungKWH") {
           const jumlahRupiahRaw = jumlahRupiahInput.value;
-          const jumlahRupiah = parseFloat(jumlahRupiahRaw.replace(/\./g, "").replace(/,/g, "."));
+          const jumlahRupiah = parseFloat(
+            jumlahRupiahRaw.replace(/\./g, "").replace(/,/g, ".")
+          );
           if (isNaN(jumlahRupiah) || jumlahRupiah <= 0) {
-            hasilListrikDiv.innerHTML = "⚠️ Mohon masukkan jumlah uang yang valid.";
+            hasilListrikDiv.innerHTML =
+              "⚠️ Mohon masukkan jumlah uang yang valid.";
             return;
           }
           const kwh = jumlahRupiah / hargaPerKWH;
-          hasilListrikDiv.innerHTML = `Konsumsi kWh adalah: <br> ${kwh.toLocaleString("id-ID", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} kWh`;
+          hasilListrikDiv.innerHTML = `Konsumsi kWh adalah: <br> ${kwh.toLocaleString(
+            "id-ID",
+            { minimumFractionDigits: 2, maximumFractionDigits: 2 }
+          )} kWh`;
         } else {
           const jumlahKWH = parseFloat(jumlahKWHInput.value.replace(/,/g, "."));
           if (isNaN(jumlahKWH) || jumlahKWH <= 0) {
@@ -824,7 +1023,10 @@
             return;
           }
           const totalRupiah = jumlahKWH * hargaPerKWH;
-          hasilListrikDiv.innerHTML = `Jumlah Rupiah yang harus dibayarkan adalah: <br> Rp ${totalRupiah.toLocaleString("id-ID", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+          hasilListrikDiv.innerHTML = `Jumlah Rupiah yang harus dibayarkan adalah: <br> Rp ${totalRupiah.toLocaleString(
+            "id-ID",
+            { minimumFractionDigits: 2, maximumFractionDigits: 2 }
+          )}`;
         }
       }
 
@@ -843,7 +1045,9 @@
 
       hitungListrikBtn.addEventListener("click", hitungListrik);
       resetListrikBtn.addEventListener("click", refreshListrik);
-      jumlahRupiahInput.addEventListener("keyup", () => formatRupiah(jumlahRupiahInput));
+      jumlahRupiahInput.addEventListener("keyup", () =>
+        formatRupiah(jumlahRupiahInput)
+      );
 
       for (const radio of modeRadiosListrik) {
         radio.addEventListener("change", (e) => {
@@ -979,8 +1183,11 @@
       }
 
       function hitungAir() {
-        const mode = document.querySelector('input[name="modeAir"]:checked').value;
-        const selectedRadio = document.querySelector('input[name="kelompok"]:checked');
+        const mode = document.querySelector('input[name="modeAir"]:checked')
+          .value;
+        const selectedRadio = document.querySelector(
+          'input[name="kelompok"]:checked'
+        );
 
         if (!selectedRadio) {
           hasilAirDiv.innerHTML = "⚠️ Pilih salah satu kelompok pelanggan.";
@@ -992,28 +1199,38 @@
         const tarifKelompok = tarifAir[kelompok];
 
         if (mode === "rupiah-to-m3") {
-          const inputValue = rupiahAirInput.value.replace(/\./g, "").replace(/,/g, ".");
+          const inputValue = rupiahAirInput.value
+            .replace(/\./g, "")
+            .replace(/,/g, ".");
           const totalRupiah = parseFloat(inputValue);
 
           if (isNaN(totalRupiah) || totalRupiah <= 0) {
-            hasilAirDiv.innerHTML = "⚠️ Masukkan jumlah tagihan yang valid (hanya angka positif).";
+            hasilAirDiv.innerHTML =
+              "⚠️ Masukkan jumlah tagihan yang valid (hanya angka positif).";
             return;
           }
 
           const penggunaanAir = hitungRupiahKeM3(totalRupiah, tarifKelompok);
-          hasilAirDiv.innerHTML = `Jumlah tagihan Anda adalah **Rp ${totalRupiah.toLocaleString("id-ID")}**.<br>
+          hasilAirDiv.innerHTML = `Jumlah tagihan Anda adalah **Rp ${totalRupiah.toLocaleString(
+            "id-ID"
+          )}**.<br>
                                  Berdasarkan tarif **${namaKelompok}**, perkiraan penggunaan air Anda adalah sekitar **${penggunaanAir} meter kubik**.<br>`;
         } else {
           const totalM3 = parseFloat(m3AirInput.value.replace(/,/g, "."));
 
           if (isNaN(totalM3) || totalM3 <= 0) {
-            hasilAirDiv.innerHTML = "⚠️ Masukkan jumlah penggunaan air yang valid (angka positif).";
+            hasilAirDiv.innerHTML =
+              "⚠️ Masukkan jumlah penggunaan air yang valid (angka positif).";
             return;
           }
 
           const totalRupiah = hitungM3KeRupiah(totalM3, tarifKelompok);
-          hasilAirDiv.innerHTML = `Penggunaan air Anda adalah **${totalM3.toLocaleString("id-ID")} meter kubik**.<br>
-                                 Berdasarkan tarif **${namaKelompok}**, perkiraan jumlah tagihan Anda adalah sekitar **Rp ${totalRupiah.toLocaleString("id-ID")}**.<br>`;
+          hasilAirDiv.innerHTML = `Penggunaan air Anda adalah **${totalM3.toLocaleString(
+            "id-ID"
+          )} meter kubik**.<br>
+                                 Berdasarkan tarif **${namaKelompok}**, perkiraan jumlah tagihan Anda adalah sekitar **Rp ${totalRupiah.toLocaleString(
+            "id-ID"
+          )}**.<br>`;
         }
       }
 
@@ -1029,7 +1246,8 @@
       }
 
       function toggleAirInputs() {
-        const mode = document.querySelector('input[name="modeAir"]:checked').value;
+        const mode = document.querySelector('input[name="modeAir"]:checked')
+          .value;
         if (mode === "rupiah-to-m3") {
           rupiahAirGroup.style.display = "block";
           m3AirGroup.style.display = "none";
@@ -1092,7 +1310,12 @@
         const total_slb_triwulan = total_slb_tahun / 4;
         const total_slb_bulan = total_slb_tahun / 12;
 
-        const total_keseluruhan_tahun = total_sd_tahun + total_smp_tahun + total_sma_tahun + total_smk_tahun + total_slb_tahun;
+        const total_keseluruhan_tahun =
+          total_sd_tahun +
+          total_smp_tahun +
+          total_sma_tahun +
+          total_smk_tahun +
+          total_slb_tahun;
         const total_keseluruhan_triwulan = total_keseluruhan_tahun / 4;
         const total_keseluruhan_bulan = total_keseluruhan_tahun / 12;
 
@@ -1111,29 +1334,47 @@
           return formatter.format(angka);
         };
 
-        document.getElementById("sd-total-tahun").innerText = formatRupiah(total_sd_tahun);
-        document.getElementById("sd-total-triwulan").innerText = formatRupiah(total_sd_triwulan);
-        document.getElementById("sd-total-bulan").innerText = formatRupiah(total_sd_bulan);
+        document.getElementById("sd-total-tahun").innerText =
+          formatRupiah(total_sd_tahun);
+        document.getElementById("sd-total-triwulan").innerText =
+          formatRupiah(total_sd_triwulan);
+        document.getElementById("sd-total-bulan").innerText =
+          formatRupiah(total_sd_bulan);
 
-        document.getElementById("smp-total-tahun").innerText = formatRupiah(total_smp_tahun);
-        document.getElementById("smp-total-triwulan").innerText = formatRupiah(total_smp_triwulan);
-        document.getElementById("smp-total-bulan").innerText = formatRupiah(total_smp_bulan);
+        document.getElementById("smp-total-tahun").innerText =
+          formatRupiah(total_smp_tahun);
+        document.getElementById("smp-total-triwulan").innerText =
+          formatRupiah(total_smp_triwulan);
+        document.getElementById("smp-total-bulan").innerText =
+          formatRupiah(total_smp_bulan);
 
-        document.getElementById("sma-total-tahun").innerText = formatRupiah(total_sma_tahun);
-        document.getElementById("sma-total-triwulan").innerText = formatRupiah(total_sma_triwulan);
-        document.getElementById("sma-total-bulan").innerText = formatRupiah(total_sma_bulan);
+        document.getElementById("sma-total-tahun").innerText =
+          formatRupiah(total_sma_tahun);
+        document.getElementById("sma-total-triwulan").innerText =
+          formatRupiah(total_sma_triwulan);
+        document.getElementById("sma-total-bulan").innerText =
+          formatRupiah(total_sma_bulan);
 
-        document.getElementById("smk-total-tahun").innerText = formatRupiah(total_smk_tahun);
-        document.getElementById("smk-total-triwulan").innerText = formatRupiah(total_smk_triwulan);
-        document.getElementById("smk-total-bulan").innerText = formatRupiah(total_smk_bulan);
+        document.getElementById("smk-total-tahun").innerText =
+          formatRupiah(total_smk_tahun);
+        document.getElementById("smk-total-triwulan").innerText =
+          formatRupiah(total_smk_triwulan);
+        document.getElementById("smk-total-bulan").innerText =
+          formatRupiah(total_smk_bulan);
 
-        document.getElementById("slb-total-tahun").innerText = formatRupiah(total_slb_tahun);
-        document.getElementById("slb-total-triwulan").innerText = formatRupiah(total_slb_triwulan);
-        document.getElementById("slb-total-bulan").innerText = formatRupiah(total_slb_bulan);
+        document.getElementById("slb-total-tahun").innerText =
+          formatRupiah(total_slb_tahun);
+        document.getElementById("slb-total-triwulan").innerText =
+          formatRupiah(total_slb_triwulan);
+        document.getElementById("slb-total-bulan").innerText =
+          formatRupiah(total_slb_bulan);
 
-        document.getElementById("totalBiaya-tahun").innerText = formatRupiah(total_keseluruhan_tahun);
-        document.getElementById("totalBiaya-triwulan").innerText = formatRupiah(total_keseluruhan_triwulan);
-        document.getElementById("totalBiaya-bulan").innerText = formatRupiah(total_keseluruhan_bulan);
+        document.getElementById("totalBiaya-tahun").innerText =
+          formatRupiah(total_keseluruhan_tahun);
+        document.getElementById("totalBiaya-triwulan").innerText =
+          formatRupiah(total_keseluruhan_triwulan);
+        document.getElementById("totalBiaya-bulan").innerText =
+          formatRupiah(total_keseluruhan_bulan);
       });
 
       document.getElementById("resetSPP").addEventListener("click", function () {
@@ -1209,22 +1450,26 @@
           {
             id: "sd",
             count: document.getElementById("sdKJP").value,
-            school: document.querySelector('input[name="sekolah-sd"]:checked').value,
+            school: document.querySelector('input[name="sekolah-sd"]:checked')
+              .value,
           },
           {
             id: "smp",
             count: document.getElementById("smpKJP").value,
-            school: document.querySelector('input[name="sekolah-smp"]:checked').value,
+            school: document.querySelector('input[name="sekolah-smp"]:checked')
+              .value,
           },
           {
             id: "sma",
             count: document.getElementById("smaKJP").value,
-            school: document.querySelector('input[name="sekolah-sma"]:checked').value,
+            school: document.querySelector('input[name="sekolah-sma"]:checked')
+              .value,
           },
           {
             id: "smk",
             count: document.getElementById("smkKJP").value,
-            school: document.querySelector('input[name="sekolah-smk"]:checked').value,
+            school: document.querySelector('input[name="sekolah-smk"]:checked')
+              .value,
           },
           {
             id: "pkbm",
@@ -1262,9 +1507,15 @@
           tabelBody.innerHTML += row;
         });
 
-        document.getElementById("total-per-bulan").textContent = `Rp ${totalBulan.toLocaleString("id-ID")}`;
-        document.getElementById("total-per-triwulan").textContent = `Rp ${totalTriwulan.toLocaleString("id-ID")}`;
-        document.getElementById("total-per-tahun").textContent = `Rp ${totalTahun.toLocaleString("id-ID")}`;
+        document.getElementById("total-per-bulan").textContent = `Rp ${totalBulan.toLocaleString(
+          "id-ID"
+        )}`;
+        document.getElementById("total-per-triwulan").textContent = `Rp ${totalTriwulan.toLocaleString(
+          "id-ID"
+        )}`;
+        document.getElementById("total-per-tahun").textContent = `Rp ${totalTahun.toLocaleString(
+          "id-ID"
+        )}`;
       }
 
       function resetFormKJP() {
@@ -1298,7 +1549,8 @@
         const parts = cleanedValue.split(".");
         const integerPart = parseInt(parts[0]).toLocaleString("id-ID");
         const decimalPart = parts[1];
-        if (decimalPart !== undefined) return integerPart + "," + decimalPart;
+        if (decimalPart !== undefined)
+          return integerPart + "," + decimalPart;
         else return integerPart;
       };
 
@@ -1311,7 +1563,8 @@
           const parsedValue = parseFloat(value) || 0;
           total += parsedValue;
           const decimalPart = value.split(".")[1] || "";
-          if (decimalPart.length > maxDecimalPlaces) maxDecimalPlaces = decimalPart.length;
+          if (decimalPart.length > maxDecimalPlaces)
+            maxDecimalPlaces = decimalPart.length;
         });
         if (maxDecimalPlaces > 0)
           totalSumSpan.textContent = total.toLocaleString("id-ID", {
@@ -1345,9 +1598,13 @@
           return;
         }
         const cursorPosition = input.selectionStart;
-        const separatorsBefore = (value.substring(0, cursorPosition).match(/\./g) || []).length;
+        const separatorsBefore = (
+          value.substring(0, cursorPosition).match(/\./g) || []
+        ).length;
         input.value = formatNumber(value);
-        const newSeparatorsBefore = (input.value.substring(0, input.selectionStart).match(/\./g) || []).length;
+        const newSeparatorsBefore = (
+          input.value.substring(0, input.selectionStart).match(/\./g) || []
+        ).length;
         input.selectionStart = cursorPosition + (newSeparatorsBefore - separatorsBefore);
         input.selectionEnd = cursorPosition + (newSeparatorsBefore - separatorsBefore);
         updateSum();
@@ -1406,4 +1663,3 @@
     </script>
   </body>
 </html>
-
