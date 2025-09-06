@@ -219,7 +219,7 @@
         <h2>Kalkulator Iuran Bulanan BPJS</h2>
         <div class="form-group">
           <label for="jumlahOrangBPJS">Jumlah Orang:</label>
-          <input type="number" id="jumlahOrangBPJS" min="1" step="1" oninput="this.value = Math.floor(this.value);" value="1" />
+          <input type="number" id="jumlahOrangBPJS" min="1" step="1" oninput="this.value = Math.floor(this.value);" value="0" />
         </div>
         <div class="form-group">
           <label>Pilihan Kelas:</label>
@@ -249,6 +249,10 @@
         <div class="result">
           <p>Total iuran bulanan BPJS yang harus dibayarkan:</p>
           <h3 id="totalBayarBPJS">Rp0</h3>
+        </div>
+        <div class="result">
+          <p>Total iuran tahunan BPJS yang harus dibayarkan:</p>
+          <h3 id="totalBayarBPJStahunan">Rp0</h3>
         </div>
       </div>
 
@@ -452,6 +456,7 @@
       const resetBPJSBtn = document.getElementById("resetBPJSBtn");
       const jumlahOrangBPJSInput = document.getElementById("jumlahOrangBPJS");
       const totalBayarBPJS = document.getElementById("totalBayarBPJS");
+      const totalBayarBPJStahunan = document.getElementById("totalBayarBPJStahunan");
 
       jumlahOrangBPJSInput.addEventListener("input", function (e) {
         let value = e.target.value;
@@ -475,17 +480,22 @@
         if (isNaN(jumlahOrang) || jumlahOrang <= 0) {
           alert("Masukkan jumlah orang yang valid (hanya angka dan lebih dari 0).");
           totalBayarBPJS.textContent = "Rp0";
+          totalBayarBPJStahunan.textContent = "Rp0";
           return;
         }
 
         if (!kelasDipilih) {
           alert("Mohon pilih salah satu kelas BPJS.");
           totalBayarBPJS.textContent = "Rp0";
+          totalBayarBPJStahunan.textContent = "Rp0";
           return;
         }
 
-        const totalBiaya = jumlahOrang * biayaPerKelas[kelasDipilih.value];
-        totalBayarBPJS.textContent = `Rp${totalBiaya.toLocaleString("id-ID")}`;
+        const totalBiayaBulanan = jumlahOrang * biayaPerKelas[kelasDipilih.value];
+        const totalBiayaTahunan = totalBiayaBulanan * 12;
+
+        totalBayarBPJS.textContent = `Rp${totalBiayaBulanan.toLocaleString("id-ID")}`;
+        totalBayarBPJStahunan.textContent = `Rp${totalBiayaTahunan.toLocaleString("id-ID")}`;
       });
 
       resetBPJSBtn.addEventListener("click", () => {
@@ -493,6 +503,7 @@
         const radios = document.getElementsByName("kelas");
         radios.forEach((radio) => (radio.checked = false));
         totalBayarBPJS.textContent = "Rp0";
+        totalBayarBPJStahunan.textContent = "Rp0";
       });
 
       // --- Kalkulator Listrik ---
