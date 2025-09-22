@@ -837,7 +837,7 @@
           }
           const jumlahRupiahBersih = jumlahRupiah - jumlahRupiah * 0.024;
           const kwh = jumlahRupiahBersih / hargaPerKWH;
-          hasilListrikDiv.innerHTML = `Konsumsi kWh adalah: <br> ${kwh.toLocaleString("id-ID", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} kWh`;
+          hasilListrikDiv.innerHTML = `Konsumsi kWh adalah (termasuk pajak): <br> ${kwh.toLocaleString("id-ID", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} kWh`;
         } else {
           const jumlahKWH = parseFloat(jumlahKWHInput.value.replace(/,/g, "."));
           if (isNaN(jumlahKWH) || jumlahKWH <= 0) {
@@ -846,7 +846,7 @@
           }
           const totalRupiah = jumlahKWH * hargaPerKWH;
           const totalRupiahDenganPajak = totalRupiah + totalRupiah * 0.024;
-          hasilListrikDiv.innerHTML = `Jumlah Rupiah yang harus dibayarkan adalah: <br> Rp ${totalRupiahDenganPajak.toLocaleString("id-ID", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+          hasilListrikDiv.innerHTML = `Jumlah Rupiah yang harus dibayarkan (termasuk pajak) adalah: <br> Rp ${totalRupiahDenganPajak.toLocaleString("id-ID", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
         }
       }
 
@@ -1428,4 +1428,5 @@
     </script>
   </body>
 </html>
+
 
