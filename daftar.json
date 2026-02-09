@@ -1,0 +1,3294 @@
+[
+  {
+    "kode": "3174 - 010 - 001",
+    "nama": "KEMBANGAN - JOGLO"
+  },
+  {
+    "kode": "3174 - 010 - 002",
+    "nama": "KEMBANGAN - SRENGSENG"
+  },
+  {
+    "kode": "3174 - 010 - 003",
+    "nama": "KEMBANGAN - MERUYA SELATAN"
+  },
+  {
+    "kode": "3174 - 010 - 004",
+    "nama": "KEMBANGAN - MERUYA UTARA"
+  },
+  {
+    "kode": "3174 - 010 - 005",
+    "nama": "KEMBANGAN - KEMBANGAN SELATAN"
+  },
+  {
+    "kode": "3174 - 010 - 006",
+    "nama": "KEMBANGAN - KEMBANGAN UTARA"
+  },
+  {
+    "kode": "3174 - 020 - 001",
+    "nama": "KEBON JERUK - SUKABUMI SELATAN"
+  },
+  {
+    "kode": "3174 - 020 - 002",
+    "nama": "KEBON JERUK - SUKABUMI UTARA"
+  },
+  {
+    "kode": "3174 - 020 - 003",
+    "nama": "KEBON JERUK - KELAPA DUA"
+  },
+  {
+    "kode": "3174 - 020 - 004",
+    "nama": "KEBON JERUK - KEBON JERUK"
+  },
+  {
+    "kode": "3174 - 020 - 005",
+    "nama": "KEBON JERUK - DURI KEPA"
+  },
+  {
+    "kode": "3174 - 020 - 006",
+    "nama": "KEBON JERUK - KEDOYA SELATAN"
+  },
+  {
+    "kode": "3174 - 020 - 007",
+    "nama": "KEBON JERUK - KEDOYA UTARA"
+  },
+  {
+    "kode": "3174 - 030 - 001",
+    "nama": "PALMERAH - PALMERAH"
+  },
+  {
+    "kode": "3174 - 030 - 002",
+    "nama": "PALMERAH - SLIPI"
+  },
+  {
+    "kode": "3174 - 030 - 003",
+    "nama": "PALMERAH - KEMANGGISAN"
+  },
+  {
+    "kode": "3174 - 030 - 004",
+    "nama": "PALMERAH - KOTA BAMBU UTARA"
+  },
+  {
+    "kode": "3174 - 030 - 005",
+    "nama": "PALMERAH - KOTA BAMBU SELATAN"
+  },
+  {
+    "kode": "3174 - 030 - 006",
+    "nama": "PALMERAH - JATI PULO"
+  },
+  {
+    "kode": "3174 - 040 - 001",
+    "nama": "GROGOL PETAMBURAN - TANJUNG DUREN UTARA"
+  },
+  {
+    "kode": "3174 - 040 - 002",
+    "nama": "GROGOL PETAMBURAN - TANJUNG DUREN SELATAN"
+  },
+  {
+    "kode": "3174 - 040 - 003",
+    "nama": "GROGOL PETAMBURAN - TOMANG"
+  },
+  {
+    "kode": "3174 - 040 - 004",
+    "nama": "GROGOL PETAMBURAN - GROGOL"
+  },
+  {
+    "kode": "3174 - 040 - 005",
+    "nama": "GROGOL PETAMBURAN - JELAMBAR"
+  },
+  {
+    "kode": "3174 - 040 - 006",
+    "nama": "GROGOL PETAMBURAN - WIJAYA KESUMA"
+  },
+  {
+    "kode": "3174 - 040 - 007",
+    "nama": "GROGOL PETAMBURAN - JELAMBAR BARU"
+  },
+  {
+    "kode": "3174 - 050 - 001",
+    "nama": "TAMBORA - KALIANYAR"
+  },
+  {
+    "kode": "3174 - 050 - 002",
+    "nama": "TAMBORA - DURI SELATAN"
+  },
+  {
+    "kode": "3174 - 050 - 003",
+    "nama": "TAMBORA - TANAH SEREAL"
+  },
+  {
+    "kode": "3174 - 050 - 004",
+    "nama": "TAMBORA - DURI UTARA"
+  },
+  {
+    "kode": "3174 - 050 - 005",
+    "nama": "TAMBORA - KRENDANG"
+  },
+  {
+    "kode": "3174 - 050 - 006",
+    "nama": "TAMBORA - JEMBATAN BESI"
+  },
+  {
+    "kode": "3174 - 050 - 007",
+    "nama": "TAMBORA - ANGKE"
+  },
+  {
+    "kode": "3174 - 050 - 008",
+    "nama": "TAMBORA - JEMBATAN LIMA"
+  },
+  {
+    "kode": "3174 - 050 - 009",
+    "nama": "TAMBORA - TAMBORA"
+  },
+  {
+    "kode": "3174 - 050 - 010",
+    "nama": "TAMBORA - ROA MALAKA"
+  },
+  {
+    "kode": "3174 - 050 - 011",
+    "nama": "TAMBORA - PEKOJAN"
+  },
+  {
+    "kode": "3174 - 060 - 001",
+    "nama": "TAMAN SARI - KRUKUT"
+  },
+  {
+    "kode": "3174 - 060 - 002",
+    "nama": "TAMAN SARI - MAPHAR"
+  },
+  {
+    "kode": "3174 - 060 - 003",
+    "nama": "TAMAN SARI - TAMAN SARI"
+  },
+  {
+    "kode": "3174 - 060 - 004",
+    "nama": "TAMAN SARI - TANGKI"
+  },
+  {
+    "kode": "3174 - 060 - 005",
+    "nama": "TAMAN SARI - MANGGA BESAR"
+  },
+  {
+    "kode": "3174 - 060 - 006",
+    "nama": "TAMAN SARI - KEAGUNGAN"
+  },
+  {
+    "kode": "3174 - 060 - 007",
+    "nama": "TAMAN SARI - GLODOK"
+  },
+  {
+    "kode": "3174 - 060 - 008",
+    "nama": "TAMAN SARI - PINANGSIA"
+  },
+  {
+    "kode": "3174 - 070 - 001",
+    "nama": "CENGKARENG - DURI KOSAMBI"
+  },
+  {
+    "kode": "3174 - 070 - 002",
+    "nama": "CENGKARENG - RAWA BUAYA"
+  },
+  {
+    "kode": "3174 - 070 - 003",
+    "nama": "CENGKARENG - KEDAUNG KALI ANGKE"
+  },
+  {
+    "kode": "3174 - 070 - 004",
+    "nama": "CENGKARENG - KAPUK"
+  },
+  {
+    "kode": "3174 - 070 - 005",
+    "nama": "CENGKARENG - CENGKARENG TIMUR"
+  },
+  {
+    "kode": "3174 - 070 - 006",
+    "nama": "CENGKARENG - CENGKARENG BARAT"
+  },
+  {
+    "kode": "3174 - 080 - 001",
+    "nama": "KALI DERES - SEMANAN"
+  },
+  {
+    "kode": "3174 - 080 - 002",
+    "nama": "KALI DERES - KALIDERES"
+  },
+  {
+    "kode": "3174 - 080 - 003",
+    "nama": "KALI DERES - PEGADUNGAN"
+  },
+  {
+    "kode": "3174 - 080 - 004",
+    "nama": "KALI DERES - TEGAL ALUR"
+  },
+  {
+    "kode": "3174 - 080 - 005",
+    "nama": "KALI DERES - KAMAL"
+  },
+  {
+    "kode": "11 - 01",
+    "nama": "Simeulue"
+  },
+  {
+    "kode": "11 - 02",
+    "nama": "Aceh Singkil"
+  },
+  {
+    "kode": "11 - 03",
+    "nama": "Aceh Selatan"
+  },
+  {
+    "kode": "11 - 04",
+    "nama": "Aceh Tenggara"
+  },
+  {
+    "kode": "11 - 05",
+    "nama": "Aceh Timur"
+  },
+  {
+    "kode": "11 - 06",
+    "nama": "Aceh Tengah"
+  },
+  {
+    "kode": "11 - 07",
+    "nama": "Aceh Barat"
+  },
+  {
+    "kode": "11 - 08",
+    "nama": "Aceh Besar"
+  },
+  {
+    "kode": "11 - 09",
+    "nama": "Pidie"
+  },
+  {
+    "kode": "11 - 10",
+    "nama": "Bireuen"
+  },
+  {
+    "kode": "11 - 11",
+    "nama": "Aceh Utara"
+  },
+  {
+    "kode": "11 - 12",
+    "nama": "Aceh Barat Daya"
+  },
+  {
+    "kode": "11 - 13",
+    "nama": "Gayo Lues"
+  },
+  {
+    "kode": "11 - 14",
+    "nama": "Aceh Tamiang"
+  },
+  {
+    "kode": "11 - 15",
+    "nama": "Nagan Raya"
+  },
+  {
+    "kode": "11 - 16",
+    "nama": "Aceh Jaya"
+  },
+  {
+    "kode": "11 - 17",
+    "nama": "Bener Meriah"
+  },
+  {
+    "kode": "11 - 18",
+    "nama": "Pidie Jaya"
+  },
+  {
+    "kode": "11 - 71",
+    "nama": "Banda Aceh"
+  },
+  {
+    "kode": "11 - 72",
+    "nama": "Sabang"
+  },
+  {
+    "kode": "11 - 73",
+    "nama": "Langsa"
+  },
+  {
+    "kode": "11 - 74",
+    "nama": "Lhokseumawe"
+  },
+  {
+    "kode": "11 - 75",
+    "nama": "Subulussalam"
+  },
+  {
+    "kode": "12 - 01",
+    "nama": "Nias"
+  },
+  {
+    "kode": "12 - 02",
+    "nama": "Mandailing Natal"
+  },
+  {
+    "kode": "12 - 03",
+    "nama": "Tapanuli Selatan"
+  },
+  {
+    "kode": "12 - 04",
+    "nama": "Tapanuli Tengah"
+  },
+  {
+    "kode": "12 - 05",
+    "nama": "Tapanuli Utara"
+  },
+  {
+    "kode": "12 - 06",
+    "nama": "Toba Samosir"
+  },
+  {
+    "kode": "12 - 07",
+    "nama": "Labuhan Batu"
+  },
+  {
+    "kode": "12 - 08",
+    "nama": "Asahan"
+  },
+  {
+    "kode": "12 - 09",
+    "nama": "Simalungun"
+  },
+  {
+    "kode": "12 - 10",
+    "nama": "Dairi"
+  },
+  {
+    "kode": "12 - 11",
+    "nama": "Karo"
+  },
+  {
+    "kode": "12 - 12",
+    "nama": "Deli Serdang"
+  },
+  {
+    "kode": "12 - 13",
+    "nama": "Langkat"
+  },
+  {
+    "kode": "12 - 14",
+    "nama": "Nias Selatan"
+  },
+  {
+    "kode": "12 - 15",
+    "nama": "Humbang Hasundutan"
+  },
+  {
+    "kode": "12 - 16",
+    "nama": "Pakpak Bharat"
+  },
+  {
+    "kode": "12 - 17",
+    "nama": "Samosir"
+  },
+  {
+    "kode": "12 - 18",
+    "nama": "Serdang Bedagai"
+  },
+  {
+    "kode": "12 - 19",
+    "nama": "Batu Bara"
+  },
+  {
+    "kode": "12 - 20",
+    "nama": "Padang Lawas Utara"
+  },
+  {
+    "kode": "12 - 21",
+    "nama": "Padang Lawas"
+  },
+  {
+    "kode": "12 - 22",
+    "nama": "Labuhan Batu Selatan"
+  },
+  {
+    "kode": "12 - 23",
+    "nama": "Labuhan Batu Utara"
+  },
+  {
+    "kode": "12 - 24",
+    "nama": "Nias Utara"
+  },
+  {
+    "kode": "12 - 25",
+    "nama": "Nias Barat"
+  },
+  {
+    "kode": "12 - 71",
+    "nama": "Sibolga"
+  },
+  {
+    "kode": "12 - 72",
+    "nama": "Tanjung Balai"
+  },
+  {
+    "kode": "12 - 73",
+    "nama": "Pematang Siantar"
+  },
+  {
+    "kode": "12 - 74",
+    "nama": "Tebing Tinggi"
+  },
+  {
+    "kode": "12 - 75",
+    "nama": "Medan"
+  },
+  {
+    "kode": "12 - 76",
+    "nama": "Binjai"
+  },
+  {
+    "kode": "12 - 77",
+    "nama": "Padangsidimpuan"
+  },
+  {
+    "kode": "12 - 78",
+    "nama": "Gunungsitoli"
+  },
+  {
+    "kode": "13 - 01",
+    "nama": "Kepulauan Mentawai"
+  },
+  {
+    "kode": "13 - 02",
+    "nama": "Pesisir Selatan"
+  },
+  {
+    "kode": "13 - 03",
+    "nama": "Solok"
+  },
+  {
+    "kode": "13 - 04",
+    "nama": "Sijunjung"
+  },
+  {
+    "kode": "13 - 05",
+    "nama": "Tanah Datar"
+  },
+  {
+    "kode": "13 - 06",
+    "nama": "Padang Pariaman"
+  },
+  {
+    "kode": "13 - 07",
+    "nama": "Agam"
+  },
+  {
+    "kode": "13 - 08",
+    "nama": "Lima Puluh Kota"
+  },
+  {
+    "kode": "13 - 09",
+    "nama": "Pasaman"
+  },
+  {
+    "kode": "13 - 10",
+    "nama": "Solok Selatan"
+  },
+  {
+    "kode": "13 - 11",
+    "nama": "Dharmasraya"
+  },
+  {
+    "kode": "13 - 12",
+    "nama": "Pasaman Barat"
+  },
+  {
+    "kode": "13 - 71",
+    "nama": "Padang"
+  },
+  {
+    "kode": "13 - 72",
+    "nama": "Solok"
+  },
+  {
+    "kode": "13 - 73",
+    "nama": "Sawah Lunto"
+  },
+  {
+    "kode": "13 - 74",
+    "nama": "Padang Panjang"
+  },
+  {
+    "kode": "13 - 75",
+    "nama": "Bukittinggi"
+  },
+  {
+    "kode": "13 - 76",
+    "nama": "Payakumbuh"
+  },
+  {
+    "kode": "13 - 77",
+    "nama": "Pariaman"
+  },
+  {
+    "kode": "14 - 01",
+    "nama": "Kuantan Singingi"
+  },
+  {
+    "kode": "14 - 02",
+    "nama": "Indragiri Hulu"
+  },
+  {
+    "kode": "14 - 03",
+    "nama": "Indragiri Hilir"
+  },
+  {
+    "kode": "14 - 04",
+    "nama": "Pelalawan"
+  },
+  {
+    "kode": "14 - 05",
+    "nama": "Siak"
+  },
+  {
+    "kode": "14 - 06",
+    "nama": "Kampar"
+  },
+  {
+    "kode": "14 - 07",
+    "nama": "Rokan Hulu"
+  },
+  {
+    "kode": "14 - 08",
+    "nama": "Bengkalis"
+  },
+  {
+    "kode": "14 - 09",
+    "nama": "Rokan Hilir"
+  },
+  {
+    "kode": "14 - 10",
+    "nama": "Kepulauan Meranti"
+  },
+  {
+    "kode": "14 - 71",
+    "nama": "Pekanbaru"
+  },
+  {
+    "kode": "14 - 73",
+    "nama": "Dumai"
+  },
+  {
+    "kode": "15 - 01",
+    "nama": "Kerinci"
+  },
+  {
+    "kode": "15 - 02",
+    "nama": "Merangin"
+  },
+  {
+    "kode": "15 - 03",
+    "nama": "Sarolangun"
+  },
+  {
+    "kode": "15 - 04",
+    "nama": "Batang Hari"
+  },
+  {
+    "kode": "15 - 05",
+    "nama": "Muaro Jambi"
+  },
+  {
+    "kode": "15 - 06",
+    "nama": "Tanjung Jabung Timur"
+  },
+  {
+    "kode": "15 - 07",
+    "nama": "Tanjung Jabung Barat"
+  },
+  {
+    "kode": "15 - 08",
+    "nama": "Tebo"
+  },
+  {
+    "kode": "15 - 09",
+    "nama": "Bungo"
+  },
+  {
+    "kode": "15 - 71",
+    "nama": "Jambi"
+  },
+  {
+    "kode": "15 - 72",
+    "nama": "Sungai Penuh"
+  },
+  {
+    "kode": "16 - 01",
+    "nama": "Ogan Komering Ulu"
+  },
+  {
+    "kode": "16 - 02",
+    "nama": "Ogan Komering Ilir"
+  },
+  {
+    "kode": "16 - 03",
+    "nama": "Muara Enim"
+  },
+  {
+    "kode": "16 - 04",
+    "nama": "Lahat"
+  },
+  {
+    "kode": "16 - 05",
+    "nama": "Musi Rawas"
+  },
+  {
+    "kode": "16 - 06",
+    "nama": "Musi Banyuasin"
+  },
+  {
+    "kode": "16 - 07",
+    "nama": "Banyu Asin"
+  },
+  {
+    "kode": "16 - 08",
+    "nama": "Ogan Komering Ulu Selatan"
+  },
+  {
+    "kode": "16 - 09",
+    "nama": "Ogan Komering Ulu Timur"
+  },
+  {
+    "kode": "16 - 10",
+    "nama": "Ogan Ilir"
+  },
+  {
+    "kode": "16 - 11",
+    "nama": "Empat Lawang"
+  },
+  {
+    "kode": "16 - 12",
+    "nama": "Penukal Abab Lematang Ilir"
+  },
+  {
+    "kode": "16 - 13",
+    "nama": "Musi Rawas Utara"
+  },
+  {
+    "kode": "16 - 71",
+    "nama": "Palembang"
+  },
+  {
+    "kode": "16 - 72",
+    "nama": "Prabumulih"
+  },
+  {
+    "kode": "16 - 73",
+    "nama": "Pagar Alam"
+  },
+  {
+    "kode": "16 - 74",
+    "nama": "Lubuklinggau"
+  },
+  {
+    "kode": "17 - 01",
+    "nama": "Bengkulu Selatan"
+  },
+  {
+    "kode": "17 - 02",
+    "nama": "Rejang Lebong"
+  },
+  {
+    "kode": "17 - 03",
+    "nama": "Bengkulu Utara"
+  },
+  {
+    "kode": "17 - 04",
+    "nama": "Kaur"
+  },
+  {
+    "kode": "17 - 05",
+    "nama": "Seluma"
+  },
+  {
+    "kode": "17 - 06",
+    "nama": "Mukomuko"
+  },
+  {
+    "kode": "17 - 07",
+    "nama": "Lebong"
+  },
+  {
+    "kode": "17 - 08",
+    "nama": "Kepahiang"
+  },
+  {
+    "kode": "17 - 09",
+    "nama": "Bengkulu Tengah"
+  },
+  {
+    "kode": "17 - 71",
+    "nama": "Bengkulu"
+  },
+  {
+    "kode": "18 - 01",
+    "nama": "Lampung Barat"
+  },
+  {
+    "kode": "18 - 02",
+    "nama": "Tanggamus"
+  },
+  {
+    "kode": "18 - 03",
+    "nama": "Lampung Selatan"
+  },
+  {
+    "kode": "18 - 04",
+    "nama": "Lampung Timur"
+  },
+  {
+    "kode": "18 - 05",
+    "nama": "Lampung Tengah"
+  },
+  {
+    "kode": "18 - 06",
+    "nama": "Lampung Utara"
+  },
+  {
+    "kode": "18 - 07",
+    "nama": "Way Kanan"
+  },
+  {
+    "kode": "18 - 08",
+    "nama": "Tulangbawang"
+  },
+  {
+    "kode": "18 - 08",
+    "nama": "Pesawaran"
+  },
+  {
+    "kode": "18 - 10",
+    "nama": "Pringsewu"
+  },
+  {
+    "kode": "18 - 11",
+    "nama": "Mesuji"
+  },
+  {
+    "kode": "18 - 12",
+    "nama": "Tulang Bawang Barat"
+  },
+  {
+    "kode": "18 - 13",
+    "nama": "Pesisir Barat"
+  },
+  {
+    "kode": "18 - 71",
+    "nama": "Bandar Lampung"
+  },
+  {
+    "kode": "18 - 72",
+    "nama": "Metro"
+  },
+  {
+    "kode": "19 - 01",
+    "nama": "Bangka"
+  },
+  {
+    "kode": "19 - 02",
+    "nama": "Belitung"
+  },
+  {
+    "kode": "19 - 03",
+    "nama": "Bangka Barat"
+  },
+  {
+    "kode": "19 - 04",
+    "nama": "Bangka Tengah"
+  },
+  {
+    "kode": "19 - 05",
+    "nama": "Bangka Selatan"
+  },
+  {
+    "kode": "19 - 06",
+    "nama": "Belitung Timur"
+  },
+  {
+    "kode": "19 - 71",
+    "nama": "Pangkal Pinang"
+  },
+  {
+    "kode": "21 - 01",
+    "nama": "Karimun"
+  },
+  {
+    "kode": "21 - 02",
+    "nama": "Bintan"
+  },
+  {
+    "kode": "21 - 03",
+    "nama": "Natuna"
+  },
+  {
+    "kode": "21 - 04",
+    "nama": "Lingga"
+  },
+  {
+    "kode": "21 - 05",
+    "nama": "Kepulauan Anambas"
+  },
+  {
+    "kode": "21 - 71",
+    "nama": "Batam"
+  },
+  {
+    "kode": "21 - 72",
+    "nama": "Tanjung Pinang"
+  },
+  {
+    "kode": "31 - 01",
+    "nama": "Kepulauan Seribu"
+  },
+  {
+    "kode": "31 - 71",
+    "nama": "Jakarta Selatan"
+  },
+  {
+    "kode": "31 - 72",
+    "nama": "Jakarta Timur"
+  },
+  {
+    "kode": "31 - 73",
+    "nama": "Jakarta Pusat"
+  },
+  {
+    "kode": "31 - 74",
+    "nama": "Jakarta Barat"
+  },
+  {
+    "kode": "31 - 75",
+    "nama": "Jakarta Utara"
+  },
+  {
+    "kode": "32 - 01",
+    "nama": "Bogor"
+  },
+  {
+    "kode": "32 - 02",
+    "nama": "Sukabumi"
+  },
+  {
+    "kode": "32 - 03",
+    "nama": "Cianjur"
+  },
+  {
+    "kode": "32 - 04",
+    "nama": "Bandung"
+  },
+  {
+    "kode": "32 - 05",
+    "nama": "Garut"
+  },
+  {
+    "kode": "32 - 06",
+    "nama": "Tasikmalaya"
+  },
+  {
+    "kode": "32 - 07",
+    "nama": "Ciamis"
+  },
+  {
+    "kode": "32 - 08",
+    "nama": "Kuningan"
+  },
+  {
+    "kode": "32 - 09",
+    "nama": "Cirebon"
+  },
+  {
+    "kode": "32 - 10",
+    "nama": "Majalengka"
+  },
+  {
+    "kode": "32 - 11",
+    "nama": "Sumedang"
+  },
+  {
+    "kode": "32 - 12",
+    "nama": "Indramayu"
+  },
+  {
+    "kode": "32 - 13",
+    "nama": "Subang"
+  },
+  {
+    "kode": "32 - 14",
+    "nama": "Purwakarta"
+  },
+  {
+    "kode": "32 - 15",
+    "nama": "Karawang"
+  },
+  {
+    "kode": "32 - 16",
+    "nama": "Bekasi"
+  },
+  {
+    "kode": "32 - 17",
+    "nama": "Bandung Barat"
+  },
+  {
+    "kode": "32 - 18",
+    "nama": "Pangandaran"
+  },
+  {
+    "kode": "32 - 71",
+    "nama": "Bogor"
+  },
+  {
+    "kode": "32 - 72",
+    "nama": "Sukabumi"
+  },
+  {
+    "kode": "32 - 73",
+    "nama": "Bandung"
+  },
+  {
+    "kode": "32 - 74",
+    "nama": "Cirebon"
+  },
+  {
+    "kode": "32 - 75",
+    "nama": "Bekasi"
+  },
+  {
+    "kode": "32 - 76",
+    "nama": "Depok"
+  },
+  {
+    "kode": "32 - 77",
+    "nama": "Kota Cimahi"
+  },
+  {
+    "kode": "32 - 78",
+    "nama": "Kota Tasikmalaya"
+  },
+  {
+    "kode": "32 - 79",
+    "nama": "Banjar"
+  },
+  {
+    "kode": "33 - 01",
+    "nama": "Cilacap"
+  },
+  {
+    "kode": "33 - 02",
+    "nama": "Banyumas"
+  },
+  {
+    "kode": "33 - 03",
+    "nama": "Purbalingga"
+  },
+  {
+    "kode": "33 - 04",
+    "nama": "Banjarnegara"
+  },
+  {
+    "kode": "33 - 05",
+    "nama": "Kebumen"
+  },
+  {
+    "kode": "33 - 06",
+    "nama": "Purworejo"
+  },
+  {
+    "kode": "33 - 07",
+    "nama": "Wonosobo"
+  },
+  {
+    "kode": "33 - 08",
+    "nama": "Magelang"
+  },
+  {
+    "kode": "33 - 09",
+    "nama": "Boyolali"
+  },
+  {
+    "kode": "33 - 10",
+    "nama": "Klaten"
+  },
+  {
+    "kode": "33 - 11",
+    "nama": "Sukoharjo"
+  },
+  {
+    "kode": "33 - 12",
+    "nama": "Wonogiri"
+  },
+  {
+    "kode": "33 - 13",
+    "nama": "Karanganyar"
+  },
+  {
+    "kode": "33 - 14",
+    "nama": "Sragen"
+  },
+  {
+    "kode": "33 - 15",
+    "nama": "Grobogan"
+  },
+  {
+    "kode": "33 - 16",
+    "nama": "Blora"
+  },
+  {
+    "kode": "33 - 17",
+    "nama": "Rembang"
+  },
+  {
+    "kode": "33 - 18",
+    "nama": "Pati"
+  },
+  {
+    "kode": "33 - 19",
+    "nama": "Kudus"
+  },
+  {
+    "kode": "33 - 20",
+    "nama": "Jepara"
+  },
+  {
+    "kode": "33 - 21",
+    "nama": "Demak"
+  },
+  {
+    "kode": "33 - 22",
+    "nama": "Semarang"
+  },
+  {
+    "kode": "33 - 23",
+    "nama": "Temanggung"
+  },
+  {
+    "kode": "33 - 24",
+    "nama": "Kendal"
+  },
+  {
+    "kode": "33 - 25",
+    "nama": "Batang"
+  },
+  {
+    "kode": "33 - 26",
+    "nama": "Pekalongan"
+  },
+  {
+    "kode": "33 - 27",
+    "nama": "Pemalang"
+  },
+  {
+    "kode": "33 - 28",
+    "nama": "Tegal"
+  },
+  {
+    "kode": "33 - 29",
+    "nama": "Brebes"
+  },
+  {
+    "kode": "33 - 71",
+    "nama": "Magelang"
+  },
+  {
+    "kode": "33 - 72",
+    "nama": "Surakarta"
+  },
+  {
+    "kode": "33 - 73",
+    "nama": "Salatiga"
+  },
+  {
+    "kode": "33 - 74",
+    "nama": "Semarang"
+  },
+  {
+    "kode": "33 - 75",
+    "nama": "Pekalongan"
+  },
+  {
+    "kode": "33 - 76",
+    "nama": "Tegal"
+  },
+  {
+    "kode": "34 - 01",
+    "nama": "Kulon Progo"
+  },
+  {
+    "kode": "34 - 02",
+    "nama": "Bantul"
+  },
+  {
+    "kode": "34 - 03",
+    "nama": "Gunung Kidul"
+  },
+  {
+    "kode": "34 - 04",
+    "nama": "Sleman"
+  },
+  {
+    "kode": "34 - 71",
+    "nama": "Yogyakarta"
+  },
+  {
+    "kode": "35 - 01",
+    "nama": "Pacitan"
+  },
+  {
+    "kode": "35 - 02",
+    "nama": "Ponorogo"
+  },
+  {
+    "kode": "35 - 03",
+    "nama": "Trenggalek"
+  },
+  {
+    "kode": "35 - 04",
+    "nama": "Tulungagung"
+  },
+  {
+    "kode": "35 - 05",
+    "nama": "Blitar"
+  },
+  {
+    "kode": "35 - 06",
+    "nama": "Kediri"
+  },
+  {
+    "kode": "35 - 07",
+    "nama": "Malang"
+  },
+  {
+    "kode": "35 - 08",
+    "nama": "Lumajang"
+  },
+  {
+    "kode": "35 - 09",
+    "nama": "Jember"
+  },
+  {
+    "kode": "35 - 10",
+    "nama": "Banyuwangi"
+  },
+  {
+    "kode": "35 - 11",
+    "nama": "Bondowoso"
+  },
+  {
+    "kode": "35 - 12",
+    "nama": "Situbondo"
+  },
+  {
+    "kode": "35 - 13",
+    "nama": "Probolinggo"
+  },
+  {
+    "kode": "35 - 14",
+    "nama": "Pasuruan"
+  },
+  {
+    "kode": "35 - 15",
+    "nama": "Sidoarjo"
+  },
+  {
+    "kode": "35 - 16",
+    "nama": "Mojokerto"
+  },
+  {
+    "kode": "35 - 17",
+    "nama": "Jombang"
+  },
+  {
+    "kode": "35 - 18",
+    "nama": "Nganjuk"
+  },
+  {
+    "kode": "35 - 19",
+    "nama": "Madiun"
+  },
+  {
+    "kode": "35 - 20",
+    "nama": "Magetan"
+  },
+  {
+    "kode": "35 - 21",
+    "nama": "Ngawi"
+  },
+  {
+    "kode": "35 - 22",
+    "nama": "Bojonegoro"
+  },
+  {
+    "kode": "35 - 23",
+    "nama": "Tuban"
+  },
+  {
+    "kode": "35 - 24",
+    "nama": "Lamongan"
+  },
+  {
+    "kode": "35 - 25",
+    "nama": "Gresik"
+  },
+  {
+    "kode": "35 - 26",
+    "nama": "Bangkalan"
+  },
+  {
+    "kode": "35 - 27",
+    "nama": "Sampang"
+  },
+  {
+    "kode": "35 - 28",
+    "nama": "Pamekasan"
+  },
+  {
+    "kode": "35 - 29",
+    "nama": "Sumenep"
+  },
+  {
+    "kode": "35 - 71",
+    "nama": "Kediri"
+  },
+  {
+    "kode": "35 - 72",
+    "nama": "Blitar"
+  },
+  {
+    "kode": "35 - 73",
+    "nama": "Malang"
+  },
+  {
+    "kode": "35 - 74",
+    "nama": "Probolinggo"
+  },
+  {
+    "kode": "35 - 75",
+    "nama": "Pasuruan"
+  },
+  {
+    "kode": "35 - 76",
+    "nama": "Kota Mojokerto"
+  },
+  {
+    "kode": "35 - 77",
+    "nama": "Kota Madiun"
+  },
+  {
+    "kode": "35 - 78",
+    "nama": "Surabaya"
+  },
+  {
+    "kode": "35 - 79",
+    "nama": "Batu"
+  },
+  {
+    "kode": "36 - 01",
+    "nama": "Pandeglang"
+  },
+  {
+    "kode": "36 - 02",
+    "nama": "Lebak"
+  },
+  {
+    "kode": "36 - 03",
+    "nama": "Tangerang"
+  },
+  {
+    "kode": "36 - 04",
+    "nama": "Serang"
+  },
+  {
+    "kode": "36 - 71",
+    "nama": "Tangerang"
+  },
+  {
+    "kode": "36 - 72",
+    "nama": "Cilegon"
+  },
+  {
+    "kode": "36 - 73",
+    "nama": "Serang"
+  },
+  {
+    "kode": "36 - 74",
+    "nama": "Tangerang Selatan"
+  },
+  {
+    "kode": "51 - 01",
+    "nama": "Jembrana"
+  },
+  {
+    "kode": "51 - 02",
+    "nama": "Tabanan"
+  },
+  {
+    "kode": "51 - 03",
+    "nama": "Badung"
+  },
+  {
+    "kode": "51 - 04",
+    "nama": "Gianyar"
+  },
+  {
+    "kode": "51 - 05",
+    "nama": "Klungkung"
+  },
+  {
+    "kode": "51 - 06",
+    "nama": "Bangli"
+  },
+  {
+    "kode": "51 - 07",
+    "nama": "Karang Asem"
+  },
+  {
+    "kode": "51 - 08",
+    "nama": "Buleleng"
+  },
+  {
+    "kode": "51 - 71",
+    "nama": "Denpasar"
+  },
+  {
+    "kode": "52 - 01",
+    "nama": "Lombok Barat"
+  },
+  {
+    "kode": "52 - 02",
+    "nama": "Lombok Tengah"
+  },
+  {
+    "kode": "52 - 03",
+    "nama": "Lombok Timur"
+  },
+  {
+    "kode": "52 - 04",
+    "nama": "Sumbawa"
+  },
+  {
+    "kode": "52 - 05",
+    "nama": "Dompu"
+  },
+  {
+    "kode": "52 - 06",
+    "nama": "Bima"
+  },
+  {
+    "kode": "52 - 07",
+    "nama": "Sumbawa Barat"
+  },
+  {
+    "kode": "52 - 08",
+    "nama": "Lombok Utara"
+  },
+  {
+    "kode": "52 - 71",
+    "nama": "Mataram"
+  },
+  {
+    "kode": "52 - 72",
+    "nama": "Bima"
+  },
+  {
+    "kode": "53 - 01",
+    "nama": "Sumba Barat"
+  },
+  {
+    "kode": "53 - 02",
+    "nama": "Sumba Timur"
+  },
+  {
+    "kode": "53 - 03",
+    "nama": "Kupang"
+  },
+  {
+    "kode": "53 - 04",
+    "nama": "Timor Tengah Selatan"
+  },
+  {
+    "kode": "53 - 05",
+    "nama": "Timor Tengah Utara"
+  },
+  {
+    "kode": "53 - 06",
+    "nama": "Belu"
+  },
+  {
+    "kode": "53 - 07",
+    "nama": "Alor"
+  },
+  {
+    "kode": "53 - 08",
+    "nama": "Lembata"
+  },
+  {
+    "kode": "53 - 09",
+    "nama": "Flores Timur"
+  },
+  {
+    "kode": "53 - 10",
+    "nama": "Sikka"
+  },
+  {
+    "kode": "53 - 11",
+    "nama": "Ende"
+  },
+  {
+    "kode": "53 - 12",
+    "nama": "Ngada"
+  },
+  {
+    "kode": "53 - 13",
+    "nama": "Manggarai"
+  },
+  {
+    "kode": "53 - 14",
+    "nama": "Rote Ndao"
+  },
+  {
+    "kode": "53 - 15",
+    "nama": "Manggarai Barat"
+  },
+  {
+    "kode": "53 - 16",
+    "nama": "Sumba Tengah"
+  },
+  {
+    "kode": "53 - 17",
+    "nama": "Sumba Barat Daya"
+  },
+  {
+    "kode": "53 - 18",
+    "nama": "Nagekeo"
+  },
+  {
+    "kode": "53 - 19",
+    "nama": "Manggarai Timur"
+  },
+  {
+    "kode": "53 - 20",
+    "nama": "Sabu Raijua"
+  },
+  {
+    "kode": "53 - 21",
+    "nama": "Malaka"
+  },
+  {
+    "kode": "53 - 71",
+    "nama": "Kupang"
+  },
+  {
+    "kode": "61 - 01",
+    "nama": "Sambas"
+  },
+  {
+    "kode": "61 - 02",
+    "nama": "Bengkayang"
+  },
+  {
+    "kode": "61 - 03",
+    "nama": "Landak"
+  },
+  {
+    "kode": "61 - 04",
+    "nama": "Pontianak"
+  },
+  {
+    "kode": "61 - 05",
+    "nama": "Sanggau"
+  },
+  {
+    "kode": "61 - 06",
+    "nama": "Ketapang"
+  },
+  {
+    "kode": "61 - 07",
+    "nama": "Sintang"
+  },
+  {
+    "kode": "61 - 08",
+    "nama": "Kapuas Hulu"
+  },
+  {
+    "kode": "61 - 09",
+    "nama": "Sekadau"
+  },
+  {
+    "kode": "61 - 10",
+    "nama": "Melawi"
+  },
+  {
+    "kode": "61 - 11",
+    "nama": "Kayong Utara"
+  },
+  {
+    "kode": "61 - 12",
+    "nama": "Kubu Raya"
+  },
+  {
+    "kode": "61 - 71",
+    "nama": "Pontianak"
+  },
+  {
+    "kode": "61 - 72",
+    "nama": "Singkawang"
+  },
+  {
+    "kode": "62 - 01",
+    "nama": "Kotawaringin Barat"
+  },
+  {
+    "kode": "62 - 02",
+    "nama": "Kotawaringin Timur"
+  },
+  {
+    "kode": "62 - 03",
+    "nama": "Kapuas"
+  },
+  {
+    "kode": "62 - 04",
+    "nama": "Barito Selatan"
+  },
+  {
+    "kode": "62 - 05",
+    "nama": "Barito Utara"
+  },
+  {
+    "kode": "62 - 06",
+    "nama": "Sukamara"
+  },
+  {
+    "kode": "62 - 07",
+    "nama": "Lamandau"
+  },
+  {
+    "kode": "62 - 08",
+    "nama": "Seruyan"
+  },
+  {
+    "kode": "62 - 09",
+    "nama": "Katingan"
+  },
+  {
+    "kode": "62 - 10",
+    "nama": "Pulang Pisau"
+  },
+  {
+    "kode": "62 - 11",
+    "nama": "Gunung Mas"
+  },
+  {
+    "kode": "62 - 12",
+    "nama": "Barito Timur"
+  },
+  {
+    "kode": "62 - 13",
+    "nama": "Murung Raya"
+  },
+  {
+    "kode": "62 - 71",
+    "nama": "Palangkaraya"
+  },
+  {
+    "kode": "63 - 01",
+    "nama": "Tanah Laut"
+  },
+  {
+    "kode": "63 - 02",
+    "nama": "Kota Baru"
+  },
+  {
+    "kode": "63 - 03",
+    "nama": "Banjar"
+  },
+  {
+    "kode": "63 - 04",
+    "nama": "Barito Kuala"
+  },
+  {
+    "kode": "63 - 05",
+    "nama": "Tapin"
+  },
+  {
+    "kode": "63 - 06",
+    "nama": "Hulu Sungai Selatan"
+  },
+  {
+    "kode": "63 - 07",
+    "nama": "Hulu Sungai Tengah"
+  },
+  {
+    "kode": "63 - 08",
+    "nama": "Hulu Sungai Utara"
+  },
+  {
+    "kode": "63 - 09",
+    "nama": "Tabalong"
+  },
+  {
+    "kode": "63 - 10",
+    "nama": "Tanah Bumbu"
+  },
+  {
+    "kode": "63 - 11",
+    "nama": "Balangan"
+  },
+  {
+    "kode": "63 - 71",
+    "nama": "Banjarmasin"
+  },
+  {
+    "kode": "71 - 73",
+    "nama": "Tomohon"
+  },
+  {
+    "kode": "71 - 74",
+    "nama": "Kotamobagu"
+  },
+  {
+    "kode": "72 - 01",
+    "nama": "Banggai Kepulauan"
+  },
+  {
+    "kode": "72 - 02",
+    "nama": "Banggai"
+  },
+  {
+    "kode": "72 - 03",
+    "nama": "Morowali"
+  },
+  {
+    "kode": "72 - 04",
+    "nama": "Poso"
+  },
+  {
+    "kode": "72 - 05",
+    "nama": "Donggala"
+  },
+  {
+    "kode": "72 - 06",
+    "nama": "Toli-Toli"
+  },
+  {
+    "kode": "72 - 07",
+    "nama": "Buol"
+  },
+  {
+    "kode": "72 - 08",
+    "nama": "Parigi Moutong"
+  },
+  {
+    "kode": "72 - 09",
+    "nama": "Tojo Una-Una"
+  },
+  {
+    "kode": "72 - 10",
+    "nama": "Sigi"
+  },
+  {
+    "kode": "72 - 11",
+    "nama": "Banggai Laut"
+  },
+  {
+    "kode": "72 - 12",
+    "nama": "Morowali Utara"
+  },
+  {
+    "kode": "72 - 71",
+    "nama": "Palu"
+  },
+  {
+    "kode": "73 - 01",
+    "nama": "Selayar"
+  },
+  {
+    "kode": "73 - 02",
+    "nama": "Bulukumba"
+  },
+  {
+    "kode": "73 - 03",
+    "nama": "Bantaeng"
+  },
+  {
+    "kode": "73 - 04",
+    "nama": "Jeneponto"
+  },
+  {
+    "kode": "73 - 05",
+    "nama": "Takalar"
+  },
+  {
+    "kode": "73 - 06",
+    "nama": "Gowa"
+  },
+  {
+    "kode": "73 - 07",
+    "nama": "Sinjai"
+  },
+  {
+    "kode": "73 - 08",
+    "nama": "Maros"
+  },
+  {
+    "kode": "73 - 09",
+    "nama": "Pangkajene Dan Kepulauan"
+  },
+  {
+    "kode": "73 - 10",
+    "nama": "Barru"
+  },
+  {
+    "kode": "73 - 11",
+    "nama": "Bone"
+  },
+  {
+    "kode": "73 - 12",
+    "nama": "Soppeng"
+  },
+  {
+    "kode": "73 - 13",
+    "nama": "Wajo"
+  },
+  {
+    "kode": "73 - 14",
+    "nama": "Sidenreng Rappang"
+  },
+  {
+    "kode": "73 - 15",
+    "nama": "Pinrang"
+  },
+  {
+    "kode": "73 - 16",
+    "nama": "Enrekang"
+  },
+  {
+    "kode": "73 - 17",
+    "nama": "Luwu"
+  },
+  {
+    "kode": "73 - 18",
+    "nama": "Tana Toraja"
+  },
+  {
+    "kode": "73 - 22",
+    "nama": "Luwu Utara"
+  },
+  {
+    "kode": "73 - 25",
+    "nama": "Luwu Timur"
+  },
+  {
+    "kode": "63 - 72",
+    "nama": "Banjar Baru"
+  },
+  {
+    "kode": "64 - 01",
+    "nama": "Paser"
+  },
+  {
+    "kode": "64 - 02",
+    "nama": "Kutai Barat"
+  },
+  {
+    "kode": "64 - 03",
+    "nama": "Kutai Kartanegara"
+  },
+  {
+    "kode": "64 - 04",
+    "nama": "Kutai Timur"
+  },
+  {
+    "kode": "64 - 05",
+    "nama": "Berau"
+  },
+  {
+    "kode": "64 - 09",
+    "nama": "Penajam Paser Utara"
+  },
+  {
+    "kode": "64 - 11",
+    "nama": "Mahakam Hulu"
+  },
+  {
+    "kode": "64 - 71",
+    "nama": "Balikpapan"
+  },
+  {
+    "kode": "64 - 72",
+    "nama": "Samarinda"
+  },
+  {
+    "kode": "64 - 74",
+    "nama": "Bontang"
+  },
+  {
+    "kode": "65 - 01",
+    "nama": "Malinau"
+  },
+  {
+    "kode": "65 - 02",
+    "nama": "Bulungan"
+  },
+  {
+    "kode": "65 - 03",
+    "nama": "Tana Tidung"
+  },
+  {
+    "kode": "65 - 04",
+    "nama": "Nunukan"
+  },
+  {
+    "kode": "65 - 71",
+    "nama": "Tarakan"
+  },
+  {
+    "kode": "71 - 01",
+    "nama": "Bolaang Mongondow"
+  },
+  {
+    "kode": "71 - 02",
+    "nama": "Minahasa"
+  },
+  {
+    "kode": "71 - 03",
+    "nama": "Kepulauan Sangihe"
+  },
+  {
+    "kode": "71 - 04",
+    "nama": "Kepulauan Talaud"
+  },
+  {
+    "kode": "71 - 05",
+    "nama": "Minahasa Selatan"
+  },
+  {
+    "kode": "71 - 06",
+    "nama": "Minahasa Utara"
+  },
+  {
+    "kode": "71 - 07",
+    "nama": "Bolaang Mongondow Utara"
+  },
+  {
+    "kode": "71 - 08",
+    "nama": "Siau Tagulandang Biaro"
+  },
+  {
+    "kode": "71 - 09",
+    "nama": "Minahasa Tenggara"
+  },
+  {
+    "kode": "71 - 10",
+    "nama": "Bolaang Mongondow Selatan"
+  },
+  {
+    "kode": "71 - 11",
+    "nama": "Bolaang Mongondow Timur"
+  },
+  {
+    "kode": "71 - 71",
+    "nama": "Manado"
+  },
+  {
+    "kode": "71 - 72",
+    "nama": "Bitung"
+  },
+  {
+    "kode": "73 - 26",
+    "nama": "Toraja Utara"
+  },
+  {
+    "kode": "73 - 71",
+    "nama": "Makassar"
+  },
+  {
+    "kode": "73 - 72",
+    "nama": "Pare-Pare"
+  },
+  {
+    "kode": "73 - 73",
+    "nama": "Palopo"
+  },
+  {
+    "kode": "74 - 01",
+    "nama": "Buton"
+  },
+  {
+    "kode": "74 - 02",
+    "nama": "Muna"
+  },
+  {
+    "kode": "74 - 03",
+    "nama": "Konawe"
+  },
+  {
+    "kode": "74 - 04",
+    "nama": "Kolaka"
+  },
+  {
+    "kode": "74 - 05",
+    "nama": "Konawe Selatan"
+  },
+  {
+    "kode": "74 - 06",
+    "nama": "Bombana"
+  },
+  {
+    "kode": "74 - 07",
+    "nama": "Wakatobi"
+  },
+  {
+    "kode": "74 - 08",
+    "nama": "Kolaka Utara"
+  },
+  {
+    "kode": "74 - 09",
+    "nama": "Buton Utara"
+  },
+  {
+    "kode": "74 - 10",
+    "nama": "Konawe Utara"
+  },
+  {
+    "kode": "74 - 11",
+    "nama": "Kolaka Timur"
+  },
+  {
+    "kode": "74 - 12",
+    "nama": "Konawe Kepulauan"
+  },
+  {
+    "kode": "74 - 13",
+    "nama": "Muna Barat"
+  },
+  {
+    "kode": "74 - 14",
+    "nama": "Buton Tengah"
+  },
+  {
+    "kode": "74 - 15",
+    "nama": "Buton Selatan"
+  },
+  {
+    "kode": "74 - 71",
+    "nama": "Kendari"
+  },
+  {
+    "kode": "74 - 72",
+    "nama": "Bau-Bau"
+  },
+  {
+    "kode": "75 - 01",
+    "nama": "Boalemo"
+  },
+  {
+    "kode": "75 - 02",
+    "nama": "Gorontalo"
+  },
+  {
+    "kode": "75 - 03",
+    "nama": "Pohuwato"
+  },
+  {
+    "kode": "75 - 04",
+    "nama": "Bone Bolango"
+  },
+  {
+    "kode": "75 - 05",
+    "nama": "Gorontalo Utara"
+  },
+  {
+    "kode": "75 - 71",
+    "nama": "Gorontalo"
+  },
+  {
+    "kode": "76 - 01",
+    "nama": "Majene"
+  },
+  {
+    "kode": "76 - 02",
+    "nama": "Polewali Mandar"
+  },
+  {
+    "kode": "76 - 03",
+    "nama": "Mamasa"
+  },
+  {
+    "kode": "76 - 04",
+    "nama": "Mamuju"
+  },
+  {
+    "kode": "76 - 05",
+    "nama": "Mamuju Utara"
+  },
+  {
+    "kode": "76 - 06",
+    "nama": "Mamuju Tengah"
+  },
+  {
+    "kode": "81 - 01",
+    "nama": "Maluku Tenggara Barat"
+  },
+  {
+    "kode": "81 - 02",
+    "nama": "Maluku Tenggara"
+  },
+  {
+    "kode": "81 - 03",
+    "nama": "Maluku Tengah"
+  },
+  {
+    "kode": "81 - 04",
+    "nama": "Buru"
+  },
+  {
+    "kode": "81 - 05",
+    "nama": "Kepulauan Aru"
+  },
+  {
+    "kode": "81 - 06",
+    "nama": "Seram Bagian Barat"
+  },
+  {
+    "kode": "81 - 07",
+    "nama": "Seram Bagian Timur"
+  },
+  {
+    "kode": "81 - 08",
+    "nama": "Maluku Barat Daya"
+  },
+  {
+    "kode": "81 - 09",
+    "nama": "Buru Selatan"
+  },
+  {
+    "kode": "81 - 71",
+    "nama": "Ambon"
+  },
+  {
+    "kode": "81 - 72",
+    "nama": "Tual"
+  },
+  {
+    "kode": "82 - 01",
+    "nama": "Halmahera Barat"
+  },
+  {
+    "kode": "82 - 02",
+    "nama": "Halmahera Tengah"
+  },
+  {
+    "kode": "82 - 03",
+    "nama": "Kepulauan Sula"
+  },
+  {
+    "kode": "82 - 04",
+    "nama": "Halmahera Selatan"
+  },
+  {
+    "kode": "82 - 05",
+    "nama": "Halmahera Utara"
+  },
+  {
+    "kode": "82 - 06",
+    "nama": "Halmahera Timur"
+  },
+  {
+    "kode": "82 - 07",
+    "nama": "Pulau Morotai"
+  },
+  {
+    "kode": "82 - 08",
+    "nama": "Pulau Taliabu"
+  },
+  {
+    "kode": "82 - 71",
+    "nama": "Ternate"
+  },
+  {
+    "kode": "82 - 72",
+    "nama": "Tidore Kepulauan"
+  },
+  {
+    "kode": "91 - 01",
+    "nama": "Fakfak"
+  },
+  {
+    "kode": "91 - 02",
+    "nama": "Kaimana"
+  },
+  {
+    "kode": "91 - 03",
+    "nama": "Teluk Wondama"
+  },
+  {
+    "kode": "91 - 04",
+    "nama": "Teluk Bintuni"
+  },
+  {
+    "kode": "91 - 05",
+    "nama": "Manokwari"
+  },
+  {
+    "kode": "91 - 11",
+    "nama": "Manokwari Selatan"
+  },
+  {
+    "kode": "91 - 12",
+    "nama": "Pegunungan Arfak"
+  },
+  {
+    "kode": "92 - 01",
+    "nama": "Raja Ampat"
+  },
+  {
+    "kode": "92 - 02",
+    "nama": "Sorong"
+  },
+  {
+    "kode": "92 - 03",
+    "nama": "Sorong Selatan"
+  },
+  {
+    "kode": "92 - 04",
+    "nama": "Maybrat"
+  },
+  {
+    "kode": "96 - 02",
+    "nama": "Dogiyai"
+  },
+  {
+    "kode": "96 - 03",
+    "nama": "Deiyai"
+  },
+  {
+    "kode": "96 - 04",
+    "nama": "Nabire"
+  },
+  {
+    "kode": "96 - 05",
+    "nama": "Paniai"
+  },
+  {
+    "kode": "96 - 06",
+    "nama": "Intan Jaya"
+  },
+  {
+    "kode": "96 - 07",
+    "nama": "Puncak"
+  },
+  {
+    "kode": "96 - 08",
+    "nama": "Puncak Jaya"
+  },
+  {
+    "kode": "97 - 19",
+    "nama": "Sarmi"
+  },
+  {
+    "kode": "97 - 20",
+    "nama": "Keerom"
+  },
+  {
+    "kode": "97 - 01",
+    "nama": "Nduga"
+  },
+  {
+    "kode": "97 - 02",
+    "nama": "Jayawijaya"
+  },
+  {
+    "kode": "97 - 03",
+    "nama": "Lanny Jaya"
+  },
+  {
+    "kode": "97 - 04",
+    "nama": "Tolikara"
+  },
+  {
+    "kode": "97 - 05",
+    "nama": "Mamberamo Tengah"
+  },
+  {
+    "kode": "97 - 06",
+    "nama": "Yalimo"
+  },
+  {
+    "kode": "97 - 07",
+    "nama": "Yahukimo"
+  },
+  {
+    "kode": "97 - 08",
+    "nama": "Pegunungan Bintang"
+  },
+  {
+    "kode": "92 - 05",
+    "nama": "Tambrauw"
+  },
+  {
+    "kode": "92 - 71",
+    "nama": "Sorong"
+  },
+  {
+    "kode": "94 - 03",
+    "nama": "Jayapura"
+  },
+  {
+    "kode": "94 - 08",
+    "nama": "Kepulauan Yapen"
+  },
+  {
+    "kode": "94 - 09",
+    "nama": "Biak Numfor"
+  },
+  {
+    "kode": "94 - 19",
+    "nama": "Sarmi"
+  },
+  {
+    "kode": "94 - 20",
+    "nama": "Keerom"
+  },
+  {
+    "kode": "94 - 26",
+    "nama": "Waropen"
+  },
+  {
+    "kode": "94 - 27",
+    "nama": "Supiori"
+  },
+  {
+    "kode": "94 - 28",
+    "nama": "Mamberamo Raya"
+  },
+  {
+    "kode": "94 - 71",
+    "nama": "Jayapura"
+  },
+  {
+    "kode": "95 - 01",
+    "nama": "Merauke"
+  },
+  {
+    "kode": "95 - 02",
+    "nama": "Boven Digoel"
+  },
+  {
+    "kode": "95 - 03",
+    "nama": "Mappi"
+  },
+  {
+    "kode": "95 - 04",
+    "nama": "Asmat"
+  },
+  {
+    "kode": "96 - 01",
+    "nama": "Mimika"
+  },
+  {
+    "kode": "4004",
+    "nama": "Afganistan"
+  },
+  {
+    "kode": "4710",
+    "nama": "Afrika Selatan"
+  },
+  {
+    "kode": "4008",
+    "nama": "Albania"
+  },
+  {
+    "kode": "4012",
+    "nama": "Aljazair"
+  },
+  {
+    "kode": "4840",
+    "nama": "Amerika Serikat"
+  },
+  {
+    "kode": "4020",
+    "nama": "Andora"
+  },
+  {
+    "kode": "4024",
+    "nama": "Angola"
+  },
+  {
+    "kode": "4660",
+    "nama": "Anguilla"
+  },
+  {
+    "kode": "4010",
+    "nama": "Antarktika"
+  },
+  {
+    "kode": "4028",
+    "nama": "Antigua dan Barbuda"
+  },
+  {
+    "kode": "4682",
+    "nama": "Arab Saudi"
+  },
+  {
+    "kode": "4032",
+    "nama": "Argentina"
+  },
+  {
+    "kode": "4051",
+    "nama": "Armenia"
+  },
+  {
+    "kode": "4533",
+    "nama": "Aruba"
+  },
+  {
+    "kode": "4036",
+    "nama": "Australia"
+  },
+  {
+    "kode": "4040",
+    "nama": "Austria"
+  },
+  {
+    "kode": "4031",
+    "nama": "Azerbaijan"
+  },
+  {
+    "kode": "4044",
+    "nama": "Bahama"
+  },
+  {
+    "kode": "4048",
+    "nama": "Bahrain"
+  },
+  {
+    "kode": "4050",
+    "nama": "Bangladesh"
+  },
+  {
+    "kode": "4052",
+    "nama": "Barbados"
+  },
+  {
+    "kode": "4528",
+    "nama": "Belanda"
+  },
+  {
+    "kode": "4112",
+    "nama": "Belarusia"
+  },
+  {
+    "kode": "4056",
+    "nama": "Belgia"
+  },
+  {
+    "kode": "4084",
+    "nama": "Belize"
+  },
+  {
+    "kode": "4204",
+    "nama": "Benin"
+  },
+  {
+    "kode": "4060",
+    "nama": "Bermuda"
+  },
+  {
+    "kode": "4064",
+    "nama": "Bhutan"
+  },
+  {
+    "kode": "4068",
+    "nama": "Bolivia"
+  },
+  {
+    "kode": "4535",
+    "nama": "Bonaire"
+  },
+  {
+    "kode": "4070",
+    "nama": "Bosnia Herzegovina"
+  },
+  {
+    "kode": "4072",
+    "nama": "Botswana"
+  },
+  {
+    "kode": "4076",
+    "nama": "Brasil"
+  },
+  {
+    "kode": "4086",
+    "nama": "British Indian Ocean Territory"
+  },
+  {
+    "kode": "4096",
+    "nama": "Brunei Darussalam"
+  },
+  {
+    "kode": "4100",
+    "nama": "Bulgaria"
+  },
+  {
+    "kode": "4854",
+    "nama": "Burkina Faso"
+  },
+  {
+    "kode": "4108",
+    "nama": "Burundi"
+  },
+  {
+    "kode": "4148",
+    "nama": "Chad"
+  },
+  {
+    "kode": "4152",
+    "nama": "Chili"
+  },
+  {
+    "kode": "4156",
+    "nama": "Cina/Tiongkok"
+  },
+  {
+    "kode": "4531",
+    "nama": "Curaçao"
+  },
+  {
+    "kode": "4208",
+    "nama": "Denmark"
+  },
+  {
+    "kode": "4262",
+    "nama": "Djibouti"
+  },
+  {
+    "kode": "4212",
+    "nama": "Dominika"
+  },
+  {
+    "kode": "4218",
+    "nama": "Ekuador"
+  },
+  {
+    "kode": "4222",
+    "nama": "El Salvador"
+  },
+  {
+    "kode": "4232",
+    "nama": "Eritrea"
+  },
+  {
+    "kode": "4233",
+    "nama": "Estonia"
+  },
+  {
+    "kode": "4748",
+    "nama": "Eswatini/Kerajaan Swaziland"
+  },
+  {
+    "kode": "4231",
+    "nama": "Ethiopia"
+  },
+  {
+    "kode": "4583",
+    "nama": "Federasi Micronesia"
+  },
+  {
+    "kode": "4242",
+    "nama": "Fiji"
+  },
+  {
+    "kode": "4608",
+    "nama": "Filipina"
+  },
+  {
+    "kode": "4246",
+    "nama": "Finlandia"
+  },
+  {
+    "kode": "4260",
+    "nama": "French Southern Territories"
+  },
+  {
+    "kode": "4266",
+    "nama": "Gabon"
+  },
+  {
+    "kode": "4270",
+    "nama": "Gambia"
+  },
+  {
+    "kode": "4268",
+    "nama": "Georgia"
+  },
+  {
+    "kode": "4239",
+    "nama": "Georgia Selatan dan Kepu-lauan Sanwich Selatan"
+  },
+  {
+    "kode": "4288",
+    "nama": "Ghana"
+  },
+  {
+    "kode": "4292",
+    "nama": "Gibraltar"
+  },
+  {
+    "kode": "4304",
+    "nama": "Greenland"
+  },
+  {
+    "kode": "4308",
+    "nama": "Grenada"
+  },
+  {
+    "kode": "4312",
+    "nama": "Guadeloupe"
+  },
+  {
+    "kode": "4316",
+    "nama": "Guam"
+  },
+  {
+    "kode": "4320",
+    "nama": "Guatemala"
+  },
+  {
+    "kode": "4831",
+    "nama": "Guernsey"
+  },
+  {
+    "kode": "4831",
+    "nama": "Guernsey"
+  },
+  {
+    "kode": "4324",
+    "nama": "Guinea"
+  },
+  {
+    "kode": "4324",
+    "nama": "Guinea"
+  },
+  {
+    "kode": "4226",
+    "nama": "Guinea Katulistiwa"
+  },
+  {
+    "kode": "4624",
+    "nama": "Guinea-Bissau"
+  },
+  {
+    "kode": "4328",
+    "nama": "Guyana"
+  },
+  {
+    "kode": "4254",
+    "nama": "Guyana Prancis"
+  },
+  {
+    "kode": "4332",
+    "nama": "Haiti"
+  },
+  {
+    "kode": "4334",
+    "nama": "Heard Island and McDonald Island"
+  },
+  {
+    "kode": "4340",
+    "nama": "Honduras"
+  },
+  {
+    "kode": "4344",
+    "nama": "Hong Kong"
+  },
+  {
+    "kode": "4348",
+    "nama": "Hongaria"
+  },
+  {
+    "kode": "4356",
+    "nama": "India"
+  },
+  {
+    "kode": "4826",
+    "nama": "Inggris"
+  },
+  {
+    "kode": "4368",
+    "nama": "Irak"
+  },
+  {
+    "kode": "4364",
+    "nama": "Iran"
+  },
+  {
+    "kode": "4352",
+    "nama": "Islandia"
+  },
+  {
+    "kode": "4376",
+    "nama": "Israel"
+  },
+  {
+    "kode": "4380",
+    "nama": "Italia"
+  },
+  {
+    "kode": "4388",
+    "nama": "Jamaika"
+  },
+  {
+    "kode": "4392",
+    "nama": "Jepang"
+  },
+  {
+    "kode": "4276",
+    "nama": "Jerman"
+  },
+  {
+    "kode": "4832",
+    "nama": "Jersey"
+  },
+  {
+    "kode": "4540",
+    "nama": "Kaledonia Baru"
+  },
+  {
+    "kode": "4116",
+    "nama": "Kamboja"
+  },
+  {
+    "kode": "4120",
+    "nama": "Kamerun"
+  },
+  {
+    "kode": "4124",
+    "nama": "Kanada"
+  },
+  {
+    "kode": "4398",
+    "nama": "Kazakhstan"
+  },
+  {
+    "kode": "4404",
+    "nama": "Kenya"
+  },
+  {
+    "kode": "4248",
+    "nama": "Kepulauan Aland"
+  },
+  {
+    "kode": "4136",
+    "nama": "Kepulauan Cayman"
+  },
+  {
+    "kode": "4166",
+    "nama": "Kepulauan Cocos (Keeling)"
+  },
+  {
+    "kode": "4184",
+    "nama": "Kepulauan Cook"
+  },
+  {
+    "kode": "4238",
+    "nama": "Kepulauan Falkland (Malvinas)"
+  },
+  {
+    "kode": "4234",
+    "nama": "Kepulauan Faroe"
+  },
+  {
+    "kode": "4580",
+    "nama": "Kepulauan Mariana Utara"
+  },
+  {
+    "kode": "4584",
+    "nama": "Kepulauan Marshall"
+  },
+  {
+    "kode": "4090",
+    "nama": "Kepulauan Solomon"
+  },
+  {
+    "kode": "4796",
+    "nama": "Kepulauan Turks and Caicos"
+  },
+  {
+    "kode": "4850",
+    "nama": "Kepulauan Virgin Amerika Serikat"
+  },
+  {
+    "kode": "4092",
+    "nama": "Kepulauan Virgin Britania Raya"
+  },
+  {
+    "kode": "4876",
+    "nama": "Kepulauan Wallis dan Futuna"
+  },
+  {
+    "kode": "4296",
+    "nama": "Kiribati"
+  },
+  {
+    "kode": "4170",
+    "nama": "Kolombia"
+  },
+  {
+    "kode": "4174",
+    "nama": "Komoro"
+  },
+  {
+    "kode": "4178",
+    "nama": "Kongo"
+  },
+  {
+    "kode": "4410",
+    "nama": "Korea Selatan"
+  },
+  {
+    "kode": "4408",
+    "nama": "Korea Utara"
+  },
+  {
+    "kode": "4188",
+    "nama": "Kosta Rika"
+  },
+  {
+    "kode": "4191",
+    "nama": "Kroasia"
+  },
+  {
+    "kode": "4192",
+    "nama": "Kuba"
+  },
+  {
+    "kode": "4414",
+    "nama": "Kuwait"
+  },
+  {
+    "kode": "4417",
+    "nama": "Kyrgyzstan"
+  },
+  {
+    "kode": "4418",
+    "nama": "Laos"
+  },
+  {
+    "kode": "4428",
+    "nama": "Latvia"
+  },
+  {
+    "kode": "4422",
+    "nama": "Lebanon"
+  },
+  {
+    "kode": "4426",
+    "nama": "Lesotho"
+  },
+  {
+    "kode": "4430",
+    "nama": "Liberia"
+  },
+  {
+    "kode": "4434",
+    "nama": "Libya"
+  },
+  {
+    "kode": "4438",
+    "nama": "Liechtenstein"
+  },
+  {
+    "kode": "4440",
+    "nama": "Lituania"
+  },
+  {
+    "kode": "4442",
+    "nama": "Luksemburg"
+  },
+  {
+    "kode": "4450",
+    "nama": "Madagaskar"
+  },
+  {
+    "kode": "4446",
+    "nama": "Makao"
+  },
+  {
+    "kode": "4807",
+    "nama": "Makedonia Utara"
+  },
+  {
+    "kode": "4462",
+    "nama": "Maladewa/Maldives"
+  },
+  {
+    "kode": "4454",
+    "nama": "Malawi"
+  },
+  {
+    "kode": "4458",
+    "nama": "Malaysia"
+  },
+  {
+    "kode": "4466",
+    "nama": "Mali"
+  },
+  {
+    "kode": "4470",
+    "nama": "Malta"
+  },
+  {
+    "kode": "4474",
+    "nama": "Martinik"
+  },
+  {
+    "kode": "4478",
+    "nama": "Mauritania"
+  },
+  {
+    "kode": "4480",
+    "nama": "Mauritius"
+  },
+  {
+    "kode": "4175",
+    "nama": "Mayotte"
+  },
+  {
+    "kode": "4484",
+    "nama": "Meksiko"
+  },
+  {
+    "kode": "4818",
+    "nama": "Mesir"
+  },
+  {
+    "kode": "4492",
+    "nama": "Monako"
+  },
+  {
+    "kode": "4496",
+    "nama": "Mongolia"
+  },
+  {
+    "kode": "4499",
+    "nama": "Montenegro"
+  },
+  {
+    "kode": "4500",
+    "nama": "Montserrat"
+  },
+  {
+    "kode": "4504",
+    "nama": "Moroko"
+  },
+  {
+    "kode": "4508",
+    "nama": "Mozambik"
+  },
+  {
+    "kode": "4104",
+    "nama": "Myanmar"
+  },
+  {
+    "kode": "4516",
+    "nama": "Namibia"
+  },
+  {
+    "kode": "4520",
+    "nama": "Nauru"
+  },
+  {
+    "kode": "4524",
+    "nama": "Nepal"
+  },
+  {
+    "kode": "4566",
+    "nama": "Nigeria"
+  },
+  {
+    "kode": "4558",
+    "nama": "Nikaragua"
+  },
+  {
+    "kode": "4570",
+    "nama": "Niue"
+  },
+  {
+    "kode": "4578",
+    "nama": "Norwegia"
+  },
+  {
+    "kode": "4512",
+    "nama": "Oman"
+  },
+  {
+    "kode": "4586",
+    "nama": "Pakistan"
+  },
+  {
+    "kode": "4585",
+    "nama": "Palau"
+  },
+  {
+    "kode": "4275",
+    "nama": "Palestina"
+  },
+  {
+    "kode": "4591",
+    "nama": "Panama"
+  },
+  {
+    "kode": "4384",
+    "nama": "Pantai Gading"
+  },
+  {
+    "kode": "4598",
+    "nama": "Papua Nugini"
+  },
+  {
+    "kode": "4600",
+    "nama": "Paraguay"
+  },
+  {
+    "kode": "4604",
+    "nama": "Peru"
+  },
+  {
+    "kode": "4612",
+    "nama": "Pitcairn"
+  },
+  {
+    "kode": "4616",
+    "nama": "Polandia"
+  },
+  {
+    "kode": "4258",
+    "nama": "Polinesia Prancis"
+  },
+  {
+    "kode": "4620",
+    "nama": "Portugal"
+  },
+  {
+    "kode": "4250",
+    "nama": "Prancis"
+  },
+  {
+    "kode": "4630",
+    "nama": "Puerto Riko"
+  },
+  {
+    "kode": "4074",
+    "nama": "Pulau Bouvet"
+  },
+  {
+    "kode": "4833",
+    "nama": "Pulau Man (Isle of Man)"
+  },
+  {
+    "kode": "4162",
+    "nama": "Pulau Natal (Christmas Island)"
+  },
+  {
+    "kode": "4574",
+    "nama": "Pulau Norfolk"
+  },
+  {
+    "kode": "4634",
+    "nama": "Qatar"
+  },
+  {
+    "kode": "4372",
+    "nama": "Rapublik Irlandia"
+  },
+  {
+    "kode": "4498",
+    "nama": "Republic Moldova"
+  },
+  {
+    "kode": "4140",
+    "nama": "Republik Afrika Tengah"
+  },
+  {
+    "kode": "4180",
+    "nama": "Republik Demokatik Kongo"
+  },
+  {
+    "kode": "4203",
+    "nama": "Republik Demokratik Ceko"
+  },
+  {
+    "kode": "4214",
+    "nama": "Republik Dominika"
+  },
+  {
+    "kode": "4562",
+    "nama": "Republik Niger"
+  },
+  {
+    "kode": "4728",
+    "nama": "Republik Sudan Selatan"
+  },
+  {
+    "kode": "4638",
+    "nama": "Reunion"
+  },
+  {
+    "kode": "4642",
+    "nama": "Rumania"
+  },
+  {
+    "kode": "4643",
+    "nama": "Rusia"
+  },
+  {
+    "kode": "4646",
+    "nama": "Rwanda"
+  },
+  {
+    "kode": "4732",
+    "nama": "Sahara Barat"
+  },
+  {
+    "kode": "4652",
+    "nama": "Saint Barthélemy"
+  },
+  {
+    "kode": "4654",
+    "nama": "Saint Helena"
+  },
+  {
+    "kode": "4659",
+    "nama": "Saint Kitts dan Nevis"
+  },
+  {
+    "kode": "4662",
+    "nama": "Saint Lucia"
+  },
+  {
+    "kode": "4663",
+    "nama": "Saint Martin"
+  },
+  {
+    "kode": "4666",
+    "nama": "Saint Pierre dan Miquelon"
+  },
+  {
+    "kode": "4670",
+    "nama": "Saint Vincent dan Grenadines"
+  },
+  {
+    "kode": "4882",
+    "nama": "Samoa"
+  },
+  {
+    "kode": "4016",
+    "nama": "Samoa Amerika"
+  },
+  {
+    "kode": "4674",
+    "nama": "San Marino"
+  },
+  {
+    "kode": "4678",
+    "nama": "Sao Tome dan Principe"
+  },
+  {
+    "kode": "4680",
+    "nama": "Sark"
+  },
+  {
+    "kode": "4554",
+    "nama": "Selandia Baru"
+  },
+  {
+    "kode": "4686",
+    "nama": "Senegal"
+  },
+  {
+    "kode": "4688",
+    "nama": "Serbia"
+  },
+  {
+    "kode": "4690",
+    "nama": "Seychelles"
+  },
+  {
+    "kode": "4694",
+    "nama": "Sierra Leone"
+  },
+  {
+    "kode": "4702",
+    "nama": "Singapura"
+  },
+  {
+    "kode": "4534",
+    "nama": "Sint Maarten"
+  },
+  {
+    "kode": "4196",
+    "nama": "Siprus"
+  },
+  {
+    "kode": "4705",
+    "nama": "Slovenia"
+  },
+  {
+    "kode": "4703",
+    "nama": "Slowakia"
+  },
+  {
+    "kode": "4706",
+    "nama": "Somalia"
+  },
+  {
+    "kode": "4724",
+    "nama": "Spanyol"
+  },
+  {
+    "kode": "4144",
+    "nama": "Sri Lanka"
+  },
+  {
+    "kode": "4729",
+    "nama": "Sudan"
+  },
+  {
+    "kode": "4760",
+    "nama": "Suriah"
+  },
+  {
+    "kode": "4740",
+    "nama": "Suriname"
+  },
+  {
+    "kode": "4744",
+    "nama": "Svalbard dan Jan Mayen"
+  },
+  {
+    "kode": "4752",
+    "nama": "Swedia"
+  },
+  {
+    "kode": "4756",
+    "nama": "Swiss"
+  },
+  {
+    "kode": "4898",
+    "nama": "Taiwan"
+  },
+  {
+    "kode": "4762",
+    "nama": "Tajikistan"
+  },
+  {
+    "kode": "4132",
+    "nama": "Tanjung Verde"
+  },
+  {
+    "kode": "4834",
+    "nama": "Tanzania"
+  },
+  {
+    "kode": "4764",
+    "nama": "Thailand"
+  },
+  {
+    "kode": "4626",
+    "nama": "Timor-Leste"
+  },
+  {
+    "kode": "4768",
+    "nama": "Togo"
+  },
+  {
+    "kode": "4772",
+    "nama": "Tokelau"
+  },
+  {
+    "kode": "4776",
+    "nama": "Tonga"
+  },
+  {
+    "kode": "4780",
+    "nama": "Trinidad dan Tobago"
+  },
+  {
+    "kode": "4788",
+    "nama": "Tunisia"
+  },
+  {
+    "kode": "4792",
+    "nama": "Turki"
+  },
+  {
+    "kode": "4795",
+    "nama": "Turkmenistan"
+  },
+  {
+    "kode": "4798",
+    "nama": "Tuvalu"
+  },
+  {
+    "kode": "4800",
+    "nama": "Uganda"
+  },
+  {
+    "kode": "4804",
+    "nama": "Ukraina"
+  },
+  {
+    "kode": "4784",
+    "nama": "Uni Emirat Arab"
+  },
+  {
+    "kode": "4581",
+    "nama": "United States Minor Outlying Islands"
+  },
+  {
+    "kode": "4858",
+    "nama": "Uruguay"
+  },
+  {
+    "kode": "4860",
+    "nama": "Uzbekistan"
+  },
+  {
+    "kode": "4548",
+    "nama": "Vanuatu"
+  },
+  {
+    "kode": "4336",
+    "nama": "Vatikan"
+  },
+  {
+    "kode": "4862",
+    "nama": "Venezuela"
+  },
+  {
+    "kode": "4704",
+    "nama": "Vietnam"
+  },
+  {
+    "kode": "4887",
+    "nama": "Yaman"
+  },
+  {
+    "kode": "4400",
+    "nama": "Yordania"
+  },
+  {
+    "kode": "4300",
+    "nama": "Yunani"
+  },
+  {
+    "kode": "4894",
+    "nama": "Zambia"
+  },
+  {
+    "kode": "4716",
+    "nama": "Zimbabwe"
+  }
+]
